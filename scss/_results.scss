@@ -1,0 +1,11 @@
+ul {
+  display: inline-block;
+  text-align: left;
+  .action {
+    color: $blue;
+  }
+
+  .shortcut {
+    color: $orange;
+  }
+}

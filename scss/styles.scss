@@ -1,0 +1,20 @@
+@import "_variables";
+@import "_form";
+@import "_results";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $black;
+  color: $white;
+  font-family: $mainFont;
+  text-align: center;
+  background-image: url("../pics/pexels-bruno-thethe-1910231.jpg");
+  background-size: auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: xx-large;
+}

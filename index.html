@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Keyboard shortcuts<br />& commandlines for devs.</h1>
+    <section class="searchArea">
+      <form>
+        <div>
+          <label for="action">Search by action :</label>
+          <input
+            class="action"
+            type="text"
+            id="action"
+            name="action"
+            placeholder="action"
+          />
+        </div>
+        <div>
+          <label for="shortcut">Search by shortcut/command :</label>
+          <input
+            type="text"
+            id="shortcut"
+            name="shortcut"
+            placeholder="shortcut"
+          />
+        </div>
+      </form>
+      <p>Or filter by category :</p>
+      <div class="buttons">
+        <button type="button">VSC</button>
+        <button type="button">Chrome</button>
+        <button type="button">Git</button>
+        <button type="button">Bash</button>
+      </div>
+    </section>
+    <section class="resultsArea">
+      <ul class="results"></ul>
+    </section>
+
+    <script type="module" src="JS/main.js"></script>
+    <script type="module" src="JS/_vsc.js"></script>
+  </body>
+</html>

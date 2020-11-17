@@ -1,0 +1,21 @@
+.searchArea {
+  display: inline-block;
+  text-align: left;
+  margin-top: 3rem;
+  label,
+  * {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input {
+    height: 1.5rem;
+    border-radius: 0.2rem;
+  }
+  .buttons {
+    display: flex;
+    button {
+      margin-right: 0.3rem;
+      border-radius: 0.2rem;
+    }
+  }
+}

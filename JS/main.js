@@ -1,11 +1,12 @@
 import { shortcuts } from "./_shortcuts.js";
 
-// console.table(vsc);
-
 const searchByAction = document.querySelector(".action");
 const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
 
+let selectedCategory = "all";
+
+// find actions that match regex
 function findActions(expr, array) {
   const filteredShortcuts = array.filter((el) => {
     if (selectedCategory === "all") {
@@ -21,6 +22,7 @@ function findActions(expr, array) {
   });
 }
 
+// find shortcuts that match regex
 function findShortcuts(expr, array) {
   const filteredShortcuts = array.filter((el) => {
     if (selectedCategory === "all") {
@@ -35,6 +37,7 @@ function findShortcuts(expr, array) {
   });
 }
 
+// display the expression searched in the input field highlighted in the results
 function displaySearchedActions(event) {
   const results = findActions(event.target.value, shortcuts);
   // this = input
@@ -84,6 +87,7 @@ function displaySearchedActions(event) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
+// display the expression searched in the input field highlighted in the results
 function displaySearchedShortcuts(event) {
   const results = findShortcuts(event.target.value, shortcuts);
   const resultsHtml = results
@@ -106,19 +110,12 @@ function displaySearchedShortcuts(event) {
     <br/>
     <span class="category">${category}</span>
     </li>`;
-      /*
-    In fact we will have as a result 2 <span>'s around our input expression :
-    -> one entouring all the result expression
-    -> one entouring only the characters that need to be highlighted
-    <span class="action"><span class="highlight">comm</span>enter le code (ligne unique)</span>
-    */
     })
     .join("");
   resultsOutput.innerHTML = resultsHtml;
 }
 
-let selectedCategory = "all";
-
+// display all the shortcuts for the first loading of the page
 function displayResults(array) {
   const filteredShortcuts = array.filter((el) => {
     if (selectedCategory === "all") {
@@ -140,6 +137,7 @@ function displayResults(array) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
+// filter shortcuts by category
 function filterByCategory() {
   const selectEl = document.getElementById("categories");
   // console.log("select", selectEl);
@@ -152,9 +150,10 @@ function filterByCategory() {
 
 filterByCategory();
 
-// this is for displaying all the shortcuts on first loading of the page
+// display all the shortcuts on first loading of the page
 displayResults(shortcuts);
 
+// display results corresponding to the expression searched in the input fields
 searchByAction.addEventListener("change", displaySearchedActions);
 searchByAction.addEventListener("keyup", displaySearchedActions);
 searchByAction.addEventListener("click", displaySearchedActions);

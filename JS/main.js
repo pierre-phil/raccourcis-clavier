@@ -24,9 +24,11 @@ function findShortcuts(expr, array) {
 function displayActions() {
   const results = findActions(this.value, vsc);
   // this = input
-  const resultsHtml = results.map((el) => {
-    const regex = new RegExp(this.value, "gi");
-    /*
+  console.log("results :", results);
+  const resultsHtml = results
+    .map((el) => {
+      const regex = new RegExp(this.value, "gi");
+      /*
     The following lines are making the effect that the letters we type in the input
     become highlighted in the results.
     What happens :
@@ -36,54 +38,61 @@ function displayActions() {
     will become in the results "chercher occurence en <span class="highlight">cours</span>"
     -> as we are using map here, every expression in 'results' will have this treatment
     */
-    const action = el.action.replace(
-      regex,
-      `<span class="highlight">${this.value}</span>`
-    );
-    const shortcut = el.shortcut.replace(
-      regex,
-      `<span class="highlight">${this.value}</span>`
-    );
+      const action = el.action.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
+      const shortcut = el.shortcut.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
 
-    return `<li class="resultEl"><span class="action">
+      return `<li class="resultEl"><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
     ${shortcut}</span></li>`;
-    /*
+      /*
     In fact we will have as a result 2 <span>'s around our input expression :
     -> one entouring all the result expression
     -> one entouring only the characters that need to be highlighted
     <span class="action"><span class="highlight">comm</span>enter le code (ligne unique)</span>
     */
-  });
+    })
+    /*
+    As results is an array of objects, this prevents to have commas ","
+    between different results
+    */
+    .join("");
   resultsOutput.innerHTML = resultsHtml;
 }
 
 function displayShortcuts() {
   const results = findShortcuts(this.value, vsc);
-  console.log("results :", results);
-  const resultsHtml = results.map((el) => {
-    const regex = new RegExp(this.value, "gi");
-    const action = el.action.replace(
-      regex,
-      `<span class="highlight">${this.value}</span>`
-    );
-    const shortcut = el.shortcut.replace(
-      regex,
-      `<span class="highlight">${this.value}</span>`
-    );
-    //console.log(`%c${shortcut}`, `color:orange`);
-    return `<li class="resultEl"><span class="action">
+
+  const resultsHtml = results
+    .map((el) => {
+      const regex = new RegExp(this.value, "gi");
+      const action = el.action.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
+      const shortcut = el.shortcut.replace(
+        regex,
+        `<span class="highlight">${this.value}</span>`
+      );
+      //console.log(`%c${shortcut}`, `color:orange`);
+      return `<li class="resultEl"><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
     ${shortcut}</span></li>`;
-    /*
+      /*
     In fact we will have as a result 2 <span>'s around our input expression :
     -> one entouring all the result expression
     -> one entouring only the characters that need to be highlighted
     <span class="action"><span class="highlight">comm</span>enter le code (ligne unique)</span>
     */
-  });
+    })
+    .join("");
   resultsOutput.innerHTML = resultsHtml;
 }
 

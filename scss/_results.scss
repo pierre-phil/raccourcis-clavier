@@ -4,13 +4,13 @@ ul {
   li {
     list-style-type: square;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
   .action {
     color: $pink;
     padding: 0.5rem 0 0.5rem 0;
     font-family: $mainFont;
   }
-
   .shortcut {
     color: $red;
     font-weight: bold;

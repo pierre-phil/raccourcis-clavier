@@ -1,27 +1,30 @@
-ul {
-  display: inline-block;
-  text-align: left;
-  max-width: 30rem;
-  li {
-    list-style-type: square;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  .action {
-    color: $pink;
-    padding: 0.5rem 0 0.5rem 0;
-    font-family: $mainFont;
-  }
-  .shortcut {
-    color: $red;
-    font-weight: bold;
-  }
-  .category {
-    font-size: 0.8rem;
-    background-color: $pink;
-    padding: 0 0.7rem 0 0.7rem;
-    color: $black;
-    border-radius: 0.2rem;
+.resultsArea {
+  margin-top: 3rem;
+  ul {
+    display: inline-block;
+    text-align: left;
+    max-width: 30rem;
+    li {
+      list-style-type: square;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .action {
+      color: $pink;
+      padding: 0.5rem 0 0.5rem 0;
+      font-family: $mainFont;
+    }
+    .shortcut {
+      color: $red;
+      font-weight: bold;
+    }
+    .category {
+      font-size: 0.8rem;
+      background-color: $pink;
+      padding: 0 0.7rem 0 0.7rem;
+      color: $black;
+      border-radius: 0.2rem;
+    }
   }
 }
 

@@ -24,7 +24,7 @@ function findShortcuts(expr, array) {
 function displayActions(event) {
   const results = findActions(event.target.value, shortcuts);
   // this = input
-  console.log("results :", results);
+  // console.log("results :", results);
   const resultsHtml = results
     .map((el) => {
       const regex = new RegExp(this.value, "gi");
@@ -102,6 +102,24 @@ function displayShortcuts(event) {
     .join("");
   resultsOutput.innerHTML = resultsHtml;
 }
+
+function displayAllResults(array) {
+  console.log("shortcuts", shortcuts);
+  const resultsHtml = array
+    .map((el) => {
+      return `<li><span class="action">
+  ${el.action}</span> : 
+  <br /><span class="shortcut">
+  ${el.shortcut}</span>
+  <br/>
+  <span class="category">${el.category}</span>`;
+    })
+    .join("");
+  resultsOutput.innerHTML = resultsHtml;
+}
+
+// this is for displaying all the shortcuts on first loading of the page
+displayAllResults(shortcuts);
 
 searchByAction.addEventListener("change", displayActions);
 searchByAction.addEventListener("keyup", displayActions);

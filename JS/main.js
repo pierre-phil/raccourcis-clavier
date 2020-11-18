@@ -103,9 +103,17 @@ function displayShortcuts(event) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
+let selectedCategory = "all";
+
 function displayAllResults(array) {
-  console.log("shortcuts", shortcuts);
-  const resultsHtml = array
+  const filteredShortcuts = array.filter((el) => {
+    if (selectedCategory === "all") {
+      return true;
+    } else {
+      return el.category === selectedCategory;
+    }
+  });
+  const resultsHtml = filteredShortcuts
     .map((el) => {
       return `<li><span class="action">
   ${el.action}</span> : 
@@ -118,6 +126,18 @@ function displayAllResults(array) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
+function filterByCategory() {
+  const selectEl = document.getElementById("categories");
+  console.log("select", selectEl);
+  selectEl.addEventListener("change", () => {
+    selectedCategory = selectEl.value;
+    console.log("Selected category :", selectedCategory);
+    displayAllResults(shortcuts);
+  });
+}
+
+filterByCategory();
+
 // this is for displaying all the shortcuts on first loading of the page
 displayAllResults(shortcuts);
 
@@ -126,20 +146,3 @@ searchByAction.addEventListener("keyup", displayActions);
 
 searchByShortcut.addEventListener("change", displayShortcuts);
 searchByShortcut.addEventListener("keyup", displayShortcuts);
-
-//todo : create sort by category
-
-function selectedCategory(value) {
-  switch (value) {
-    case "vsc":
-      console.log("Category: vsc");
-    case "chrome":
-      console.log("Category: chrome");
-    case "git":
-      console.log("Category: git");
-    case "bash":
-      console.log("Category: bash");
-    default:
-      console.log("Category: all");
-  }
-}

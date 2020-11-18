@@ -3,20 +3,27 @@ import { vsc } from "./_vsc.js";
 // console.table(vsc);
 
 const searchByAction = document.querySelector(".action");
+const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
+
+function findActions(expr, array) {
+  return array.filter((el) => {
+    const regex = new RegExp(expr, "gi");
+    // find matches with regex in vsc.action or vsc.shortcut
+    return el.action.match(regex);
+  });
+}
 
 function findShortcuts(expr, array) {
   return array.filter((el) => {
     const regex = new RegExp(expr, "gi");
-    // find matches with regex in vsc.action or vsc.shortcut
-    return el.shortcut.match(regex) || el.action.match(regex);
+    return el.shortcut.match(regex);
   });
 }
 
-function displayResults() {
-  const results = findShortcuts(this.value, vsc);
+function displayActions() {
+  const results = findActions(this.value, vsc);
   // this = input
-  console.log("results :", results);
   const resultsHtml = results.map((el) => {
     const regex = new RegExp(this.value, "gi");
     /*
@@ -37,7 +44,7 @@ function displayResults() {
       regex,
       `<span class="highlight">${this.value}</span>`
     );
-    console.log(`%c${action}`, `color:orange`);
+
     return `<li><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
@@ -52,7 +59,36 @@ function displayResults() {
   resultsOutput.innerHTML = resultsHtml;
 }
 
-// todo : le champ action cherche aussi dans le shortcut, séparer les deux
+function displayShortcuts() {
+  const results = findShortcuts(this.value, vsc);
+  console.log("results :", results);
+  const resultsHtml = results.map((el) => {
+    const regex = new RegExp(this.value, "gi");
+    const action = el.action.replace(
+      regex,
+      `<span class="highlight">${this.value}</span>`
+    );
+    const shortcut = el.shortcut.replace(
+      regex,
+      `<span class="highlight">${this.value}</span>`
+    );
+    //console.log(`%c${shortcut}`, `color:orange`);
+    return `<li><span class="action">
+    ${action}</span> : 
+    <br /><span class="shortcut">
+    ${shortcut}</span></li>`;
+    /*
+    In fact we will have as a result 2 <span>'s around our input expression :
+    -> one entouring all the result expression
+    -> one entouring only the characters that need to be highlighted
+    <span class="action"><span class="highlight">comm</span>enter le code (ligne unique)</span>
+    */
+  });
+  resultsOutput.innerHTML = resultsHtml;
+}
 
-searchByAction.addEventListener("change", displayResults);
-searchByAction.addEventListener("keyup", displayResults);
+searchByAction.addEventListener("change", displayActions);
+searchByAction.addEventListener("keyup", displayActions);
+
+searchByShortcut.addEventListener("change", displayShortcuts);
+searchByShortcut.addEventListener("keyup", displayShortcuts);

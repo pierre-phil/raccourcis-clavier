@@ -7,7 +7,14 @@ const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
 
 function findActions(expr, array) {
-  return array.filter((el) => {
+  const filteredShortcuts = array.filter((el) => {
+    if (selectedCategory === "all") {
+      return true;
+    } else {
+      return el.category === selectedCategory;
+    }
+  });
+  return filteredShortcuts.filter((el) => {
     const regex = new RegExp(expr, "gi");
     // find matches with regex in vsc.action or vsc.shortcut
     return el.action.match(regex);
@@ -15,13 +22,20 @@ function findActions(expr, array) {
 }
 
 function findShortcuts(expr, array) {
-  return array.filter((el) => {
+  const filteredShortcuts = array.filter((el) => {
+    if (selectedCategory === "all") {
+      return true;
+    } else {
+      return el.category === selectedCategory;
+    }
+  });
+  return filteredShortcuts.filter((el) => {
     const regex = new RegExp(expr, "gi");
     return el.shortcut.match(regex);
   });
 }
 
-function displayActions(event) {
+function displaySearchedActions(event) {
   const results = findActions(event.target.value, shortcuts);
   // this = input
   // console.log("results :", results);
@@ -70,7 +84,7 @@ function displayActions(event) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
-function displayShortcuts(event) {
+function displaySearchedShortcuts(event) {
   const results = findShortcuts(event.target.value, shortcuts);
   const resultsHtml = results
     .map((el) => {
@@ -105,7 +119,7 @@ function displayShortcuts(event) {
 
 let selectedCategory = "all";
 
-function displayAllResults(array) {
+function displayResults(array) {
   const filteredShortcuts = array.filter((el) => {
     if (selectedCategory === "all") {
       return true;
@@ -128,21 +142,23 @@ function displayAllResults(array) {
 
 function filterByCategory() {
   const selectEl = document.getElementById("categories");
-  console.log("select", selectEl);
+  // console.log("select", selectEl);
   selectEl.addEventListener("change", () => {
     selectedCategory = selectEl.value;
-    console.log("Selected category :", selectedCategory);
-    displayAllResults(shortcuts);
+    // console.log("Selected category :", selectedCategory);
+    displayResults(shortcuts);
   });
 }
 
 filterByCategory();
 
 // this is for displaying all the shortcuts on first loading of the page
-displayAllResults(shortcuts);
+displayResults(shortcuts);
 
-searchByAction.addEventListener("change", displayActions);
-searchByAction.addEventListener("keyup", displayActions);
+searchByAction.addEventListener("change", displaySearchedActions);
+searchByAction.addEventListener("keyup", displaySearchedActions);
+searchByAction.addEventListener("click", displaySearchedActions);
 
-searchByShortcut.addEventListener("change", displayShortcuts);
-searchByShortcut.addEventListener("keyup", displayShortcuts);
+searchByShortcut.addEventListener("change", displaySearchedShortcuts);
+searchByShortcut.addEventListener("keyup", displaySearchedShortcuts);
+searchByAction.addEventListener("click", displaySearchedActions);

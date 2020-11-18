@@ -8,17 +8,12 @@
     display: block;
     margin-bottom: 0.5rem;
   }
-  input {
+  input,
+  select {
     height: 1.7rem;
     width: 12rem;
     border-radius: 0.2rem;
     font-family: $mainFont;
-  }
-  .buttons {
-    display: flex;
-    button {
-      margin-right: 0.3rem;
-      border-radius: 0.2rem;
-    }
+    margin-bottom: 1rem;
   }
 }

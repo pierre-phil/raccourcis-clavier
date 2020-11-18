@@ -24,7 +24,6 @@
             id="action"
             name="action"
             placeholder="action"
-            value="comm"
           />
         </div>
         <div>
@@ -37,14 +36,18 @@
             placeholder="shortcut"
           />
         </div>
+        <div class="categories">
+          <label for="categories">Filter by category :</label>
+
+          <select name="pets" id="pet-select">
+            <option value="">All</option>
+            <option value="vsc">VSC</option>
+            <option value="chrome">Chrome</option>
+            <option value="git">Git</option>
+            <option value="bash">Bash</option>
+          </select>
+        </div>
       </form>
-      <p>Or filter by category :</p>
-      <div class="buttons">
-        <button type="button">VSC</button>
-        <button type="button">Chrome</button>
-        <button type="button">Git</button>
-        <button type="button">Bash</button>
-      </div>
       <hr />
     </section>
     <section class="resultsArea">
@@ -52,6 +55,5 @@
     </section>
 
     <script type="module" src="JS/main.js"></script>
-    <script type="module" src="JS/_vsc.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import { vsc } from "./_vsc.js";
+import { shortcuts } from "./_shortcuts.js";
 
 // console.table(vsc);
 
@@ -21,8 +21,8 @@ function findShortcuts(expr, array) {
   });
 }
 
-function displayActions() {
-  const results = findActions(this.value, vsc);
+function displayActions(event) {
+  const results = findActions(event.target.value, shortcuts);
   // this = input
   console.log("results :", results);
   const resultsHtml = results
@@ -46,11 +46,15 @@ function displayActions() {
         regex,
         `<span class="highlight">${this.value}</span>`
       );
-
-      return `<li class="resultEl"><span class="action">
+      const category = el.category;
+      return `<li><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
-    ${shortcut}</span></li>`;
+    ${shortcut}</span>
+    <br/>
+    <span class="category">${category}</span>
+</li>
+    `;
       /*
     In fact we will have as a result 2 <span>'s around our input expression :
     -> one entouring all the result expression
@@ -66,9 +70,8 @@ function displayActions() {
   resultsOutput.innerHTML = resultsHtml;
 }
 
-function displayShortcuts() {
-  const results = findShortcuts(this.value, vsc);
-
+function displayShortcuts(event) {
+  const results = findShortcuts(event.target.value, shortcuts);
   const resultsHtml = results
     .map((el) => {
       const regex = new RegExp(this.value, "gi");
@@ -80,11 +83,15 @@ function displayShortcuts() {
         regex,
         `<span class="highlight">${this.value}</span>`
       );
+      const category = el.category;
       //console.log(`%c${shortcut}`, `color:orange`);
-      return `<li class="resultEl"><span class="action">
+      return `<li><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
-    ${shortcut}</span></li>`;
+    ${shortcut}</span>
+    <br/>
+    <span class="category">${category}</span>
+    </li>`;
       /*
     In fact we will have as a result 2 <span>'s around our input expression :
     -> one entouring all the result expression
@@ -101,3 +108,20 @@ searchByAction.addEventListener("keyup", displayActions);
 
 searchByShortcut.addEventListener("change", displayShortcuts);
 searchByShortcut.addEventListener("keyup", displayShortcuts);
+
+//todo : create sort by category
+
+function selectedCategory(value) {
+  switch (value) {
+    case "vsc":
+      console.log("Category: vsc");
+    case "chrome":
+      console.log("Category: chrome");
+    case "git":
+      console.log("Category: git");
+    case "bash":
+      console.log("Category: bash");
+    default:
+      console.log("Category: all");
+  }
+}

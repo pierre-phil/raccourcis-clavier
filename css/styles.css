@@ -2,6 +2,7 @@
   display: inline-block;
   text-align: left;
   margin-top: 3rem;
+  font-size: 1.2rem;
 }
 
 .searchArea label,
@@ -11,8 +12,10 @@
 }
 
 .searchArea input {
-  height: 1.5rem;
+  height: 1.7rem;
+  width: 12rem;
   border-radius: 0.2rem;
+  font-family: "Source Code Pro", monospace;
 }
 
 .searchArea .buttons {
@@ -44,6 +47,7 @@ ul .action {
 
 ul .shortcut {
   color: #ff595e;
+  font-weight: bold;
 }
 
 .action > .highlight {

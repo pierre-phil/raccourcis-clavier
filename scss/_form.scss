@@ -2,14 +2,17 @@
   display: inline-block;
   text-align: left;
   margin-top: 3rem;
+  font-size: 1.2rem;
   label,
   * {
     display: block;
     margin-bottom: 0.5rem;
   }
   input {
-    height: 1.5rem;
+    height: 1.7rem;
+    width: 12rem;
     border-radius: 0.2rem;
+    font-family: $mainFont;
   }
   .buttons {
     display: flex;

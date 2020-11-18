@@ -45,7 +45,7 @@ function displayActions() {
       `<span class="highlight">${this.value}</span>`
     );
 
-    return `<li><span class="action">
+    return `<li class="resultEl"><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
     ${shortcut}</span></li>`;
@@ -73,7 +73,7 @@ function displayShortcuts() {
       `<span class="highlight">${this.value}</span>`
     );
     //console.log(`%c${shortcut}`, `color:orange`);
-    return `<li><span class="action">
+    return `<li class="resultEl"><span class="action">
     ${action}</span> : 
     <br /><span class="shortcut">
     ${shortcut}</span></li>`;

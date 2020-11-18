@@ -161,4 +161,4 @@ searchByAction.addEventListener("click", displaySearchedActions);
 
 searchByShortcut.addEventListener("change", displaySearchedShortcuts);
 searchByShortcut.addEventListener("keyup", displaySearchedShortcuts);
-searchByAction.addEventListener("click", displaySearchedActions);
+searchByShortcut.addEventListener("click", displaySearchedShortcuts);

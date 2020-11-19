@@ -51,7 +51,7 @@ export const shortcuts = [
   },
   { action: "afficher/masquer terminal", shortcut: "ctrl J", category: "vsc" },
   { action: "chercher et remplacer", shortcut: "ctrl H", category: "vsc" },
-  { action: "zen mode", shortcut: "ctrl k z", category: "vsc" },
+  { action: "zen mode", shortcut: "ctrl K Z", category: "vsc" },
   {
     action: "positionner terminal à droite",
     shortcut: `pour rendre ce paramètre définitif, régler d’abord dans préférences/terminal/defaultTerminalPosition puis	effectuer l’opération suivante : clic droit sur bouton terminal au niveau de l'output/console VSC et sélectionner "déplacer à droite" / "move panel right"`,
@@ -75,12 +75,7 @@ export const shortcuts = [
     category: "vsc",
   },
   { action: "chercher un fichier", shortcut: "ctrl P", category: "vsc" },
-  {
-    action: "renommer dans tous les fichiers",
-    shortcut: "F2 sur le mot",
-    category: "vsc",
-  },
-  { action: `insert "×" symbol`, shortcut: "altGr ;", category: "vsc" },
+  { action: `insérer le symbole "×"`, shortcut: "altGr ;", category: "vsc" },
   // CHROME
   {
     action: "nettoyer local storage",
@@ -99,7 +94,7 @@ export const shortcuts = [
   },
   {
     action: "ouvrir les dev tools",
-    shortcut: "ctrl maj I",
+    shortcut: "ctrl maj I / F12",
     category: "chrome",
   },
   { action: "ouvrir l’inspecteur", shortcut: "ctrl maj C", category: "chrome" },
@@ -126,13 +121,8 @@ export const shortcuts = [
   },
   {
     action:
-      "console : augmenter ou baisser la valeur numériqué d’une propriété CSS",
-    shortcut: "↑/↓ de 10 en 10 : maj ↑/↓ - de 100 en 100 : ctrl ↑/↓",
-    category: "chrome",
-  },
-  {
-    action: "afficher les favoris (extension Barre latérale de 	favoris)",
-    shortcut: "ctrl b",
+      "console : augmenter ou diminuer la valeur numérique d’une propriété CSS",
+    shortcut: "↑/↓ / de 10 en 10 : maj ↑/↓ / de 100 en 100 : ctrl ↑/↓",
     category: "chrome",
   },
   {
@@ -170,6 +160,11 @@ export const shortcuts = [
     shortcut: "console.info()",
     category: "chrome",
   },
+  {
+    action: "console: afficher les propriétés de l'objet",
+    shortcut: "console.dir()",
+    category: "chrome",
+  },
   // GIT
   { action: "voir url origin", shortcut: "$ git remote -v", category: "git" },
   {
@@ -185,7 +180,7 @@ export const shortcuts = [
   },
   {
     action: "push une branche locale en remote",
-    shortcut: `se placer sur la branche à pousser avec git checkout, puis
+    shortcut: `se placer sur la branche à pousser avec $ git checkout, puis
 	$ git push --set-upstream origin %branche ;	$ git branch`,
     category: "git",
   },
@@ -211,7 +206,7 @@ export const shortcuts = [
     category: "bash",
   },
   {
-    action: "intérrompre processus en cours",
+    action: "interrompre processus en cours",
     shortcut: "ctrl C",
     category: "bash",
   },
@@ -233,7 +228,7 @@ export const shortcuts = [
   },
   {
     action: "installer une version précise de node",
-    shortcut: `nvm install v12.19.0
+    shortcut: `$ nvm install v12.19.0
 	(pour l'utiliser : $ nvm use 12.19.0 -)`,
     category: "bash",
   },
@@ -246,7 +241,7 @@ export const shortcuts = [
     action: "supprimer un dossier dans un repo distant",
     shortcut: `$ git rm -r --cached %folderName ;
 	$ git commit -m "Removed folder from repository" ;
-	$ git push origin main`,
+	$ git push origin %branch`,
     category: "bash",
   },
   // YARN

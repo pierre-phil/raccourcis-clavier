@@ -1,7 +1,7 @@
 .searchArea {
   display: inline-block;
   text-align: left;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
   label,
   * {
@@ -15,5 +15,22 @@
     border-radius: 0.2rem;
     font-family: $mainFont;
     margin-bottom: 1rem;
+  }
+}
+
+.warnings {
+  font-size: 0.7rem;
+  li {
+    list-style-type: none;
+    &:nth-child(3) span {
+      font-style: italic;
+      color: $orange;
+      font-size: 0.8rem;
+    }
+    span {
+      color: $orange;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
   }
 }

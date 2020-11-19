@@ -1,5 +1,15 @@
 import { shortcuts } from "./_shortcuts.js";
 
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector("#loader").style.visibility = "visible";
+  } else {
+    document.querySelector("#loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
 const searchByAction = document.querySelector(".action");
 const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
@@ -124,6 +134,7 @@ function displayResults(array) {
       return el.category === selectedCategory;
     }
   });
+
   const resultsHtml = filteredShortcuts
     .map((el) => {
       return `<li><span class="action">

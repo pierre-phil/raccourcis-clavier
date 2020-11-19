@@ -14,6 +14,24 @@
   </head>
   <body>
     <h1>Keyboard shortcuts<br />& commandlines for devs.</h1>
+    <div class="warnings">
+      Please note :
+      <ul>
+        <li>/!\ Some shortcuts might work on Linux only</li>
+        <li>
+          /!\ CLI begin with <span>$</span> and finish with
+          <span>;</span> (don't type that in you terminal),
+        </li>
+        <li>
+          so there can be several CLI on the same line :
+          <span>$ commandLine1 ; $ commandLine2</span>
+        </li>
+        <li>
+          /!\ <span>%</span> in a CLI means you need to replace with your own
+          value
+        </li>
+      </ul>
+    </div>
     <section class="searchArea">
       <form>
         <div>
@@ -47,11 +65,15 @@
             <option value="bash">Bash</option>
             <option value="yarn">Yarn</option>
             <option value="postgreSQL">PostgreSQL</option>
+            <option value="reactSnippets">
+              Simple React Snippets (VSC extension)
+            </option>
           </select>
         </div>
       </form>
       <hr />
     </section>
+    <div id="loader"></div>
     <section class="resultsArea">
       <ul class="results"></ul>
     </section>

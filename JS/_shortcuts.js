@@ -79,6 +79,7 @@ export const shortcuts = [
     shortcut: "F2 sur le mot",
     category: "vsc",
   },
+  { action: `insert "×" symbol`, shortcut: "altGr ;", category: "vsc" },
   // CHROME
   {
     action: "nettoyer local storage",
@@ -301,4 +302,23 @@ export const shortcuts = [
     shortcut: `\\\list`,
     category: "postgreSQL",
   },
+  // SIMPLE REACT SNIPETS
+  { action: "import React", shortcut: "imr", category: "reactSnippets" },
+  {
+    action: "import React, { useState }",
+    shortcut: "imrs",
+    category: "reactSnippets",
+  },
+  {
+    action: "import React, { useState, useEffect }",
+    shortcut: "imrse",
+    category: "reactSnippets",
+  },
+  {
+    action: "insert stateless functional component",
+    shortcut: "sfc",
+    category: "reactSnippets",
+  },
+  { action: "useEffect()", shortcut: "uef", category: "reactSnippets" },
+  { action: "useState()", shortcut: "usf", category: "reactSnippets" },
 ];

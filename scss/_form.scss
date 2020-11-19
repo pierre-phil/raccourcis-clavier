@@ -1,21 +1,7 @@
-.searchArea {
+.display {
   display: inline-block;
   text-align: left;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  label,
-  * {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  input,
-  select {
-    height: 1.7rem;
-    width: 12rem;
-    border-radius: 0.2rem;
-    font-family: $mainFont;
-    margin-bottom: 1rem;
-  }
+  max-width: 30rem;
 }
 
 .warnings {
@@ -33,4 +19,27 @@
       font-size: 1.1rem;
     }
   }
+}
+
+.searchArea {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  label,
+  * {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input,
+  select {
+    height: 1.7rem;
+    width: 12rem;
+    border-radius: 0.2rem;
+    font-family: $mainFont;
+    margin-bottom: 1rem;
+  }
+}
+
+hr {
+  margin-top: 3rem;
 }

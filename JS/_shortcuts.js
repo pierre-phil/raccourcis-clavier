@@ -64,7 +64,8 @@ export const shortcuts = [
   },
   {
     action: `désactiver les "tips" au survol de la souris`,
-    shortcut: `aller dans file/preferences/settings/textEditor/suggestions/quickSuggestions et cliquer sur "edit in settings.json". Si une ligne est rajoutée automatiquement, 
+    shortcut: `aller dans file/preferences/settings/textEditor
+    /suggestions/quickSuggestions et cliquer sur "edit in settings.json". Si une ligne est rajoutée automatiquement, 
   la supprimer et	ajouter la ligne suivante :	"editor.hover.enabled: false"`,
     category: "vsc",
   },

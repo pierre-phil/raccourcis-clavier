@@ -5,7 +5,11 @@ export const shortcuts = [
     shortcut: "ctrl F",
     category: "vsc",
   },
-
+  {
+    action: "masquer la barre latérale",
+    shortcut: "ctrl B",
+    category: "vsc",
+  },
   {
     action: "recherche globale",
     shortcut: "ctrl maj F",
@@ -76,6 +80,18 @@ export const shortcuts = [
   },
   { action: "chercher un fichier", shortcut: "ctrl P", category: "vsc" },
   { action: `insérer le symbole "×"`, shortcut: "altGr ;", category: "vsc" },
+  { action: `insérer le symbole "÷"`, shortcut: "altGr :", category: "vsc" },
+  { action: `insérer le symbole "±"`, shortcut: "altGr F", category: "vsc" },
+  {
+    action: `insérer le symbole "«" ou "»" (guillemets français)`,
+    shortcut: "altGr W / altGr X",
+    category: "vsc",
+  },
+  {
+    action: `insérer le symbole "©" ou "®" (copyright / registered)`,
+    shortcut: "altGr C / altGr V",
+    category: "vsc",
+  },
   // CHROME
   {
     action: "nettoyer local storage",
@@ -180,7 +196,7 @@ export const shortcuts = [
   {
     action:
       "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
-    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo. On peut alors faire le pull : $ git pull upstream. Pour se prémunir de push nos modif dans ce repo : git config remote.upstream.pushurl "FAKE ADDRESS" ainsi git retournera une erreur si par mégarde on tente de faire un $ git push upstream`,
+    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo. On peut alors faire le pull avec $ git pull upstream. Pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "FAKE ADDRESS". Ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream`,
     category: "git",
   },
   {

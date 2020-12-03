@@ -165,11 +165,21 @@ export const shortcuts = [
     shortcut: "console.dir()",
     category: "chrome",
   },
+  {
+    action: "afficher la page d'accueil",
+    shortcut: "alt + ↖ (début)",
+    category: "chrome",
+  }
   // GIT
   { action: "voir url origin", shortcut: "$ git remote -v", category: "git" },
   {
     action: "changer url origin",
     shortcut: "$ git remote set-url origin %url",
+    category: "git",
+  },
+  {
+    action: "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
+    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo. On peut alors faire le pull : $ git pull upstream. Pour se prémunir de push nos modif dans ce repo : git config remote.upstream.pushurl "FAKE ADDRESS" ainsi git retournera une erreur si par mégarde on tente de faire un $ git push upstream`,
     category: "git",
   },
   {

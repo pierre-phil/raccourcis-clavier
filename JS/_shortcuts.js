@@ -196,18 +196,18 @@ export const shortcuts = [
   {
     action:
       "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
-    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo. On peut alors faire le pull avec $ git pull upstream. Pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "FAKE ADDRESS". Ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream`,
+    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo ; On peut alors faire le pull avec $ git pull upstream; pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "FAKE ADDRESS" ; ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream;`,
     category: "git",
   },
   {
     action: "revenir à un précédent commit",
-    shortcut: `$ git checkout %identifiantDuCommit (le trouver sur github ou 	en faisant $ git 	log). Cela nous replace sur le commit sélectionné.
+    shortcut: `$ git checkout %identifiantDuCommit ; (le trouver sur github ou 	en faisant $ git 	log). Cela nous replace sur le commit sélectionné.
 	Pour push il faudra l’envoyer sur une nouvelle branche : $ git checkout -b %nomNouvelleBranche %identifiantDuCommit`,
     category: "git",
   },
   {
     action: "push une branche locale en remote",
-    shortcut: `se placer sur la branche à pousser avec $ git checkout, puis
+    shortcut: `se placer sur la branche à pousser avec $ git checkout ; puis
 	$ git push --set-upstream origin %branche ;	$ git branch`,
     category: "git",
   },
@@ -255,8 +255,8 @@ export const shortcuts = [
   },
   {
     action: "installer une version précise de node",
-    shortcut: `$ nvm install v12.19.0
-	(pour l'utiliser : $ nvm use 12.19.0 -)`,
+    shortcut: `$ nvm install v12.19.0 ;
+	pour l'utiliser $ nvm use 12.19.0 - ;`,
     category: "bash",
   },
   {

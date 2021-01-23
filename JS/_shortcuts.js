@@ -194,6 +194,13 @@ export const shortcuts = [
     category: "git",
   },
   {
+    action: "modifier username et email git du repo actuel",
+    shortcut: `$ git config user.name "$username" ; $ git config user.email "$email". 
+    Peut aussi être fait en ajoutant le champ "[user]" puis les lignes "email = $ email" et "name = $ username" au fichier 'config' dans : repository/.git/config ($ ls -a pour l'afficher)`,
+    category: "git",
+  },
+
+  {
     action: "changer url origin",
     shortcut: "$ git remote set-url origin %url",
     category: "git",

@@ -189,6 +189,11 @@ export const shortcuts = [
   // GIT
   { action: "voir url origin", shortcut: "$ git remote -v", category: "git" },
   {
+    action: "voir username et email de git configurés globalement",
+    shortcut: "$ git config --list",
+    category: "git",
+  },
+  {
     action: "changer url origin",
     shortcut: "$ git remote set-url origin %url",
     category: "git",

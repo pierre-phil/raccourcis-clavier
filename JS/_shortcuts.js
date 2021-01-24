@@ -206,6 +206,11 @@ export const shortcuts = [
     category: "git",
   },
   {
+    action: "ajouter url origin",
+    shortcut: "$ git remote add origin %url ; $ git remote -v",
+    category: "git",
+  },
+  {
     action:
       "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
     shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo ; On peut alors faire le pull avec $ git pull upstream; pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "FAKE ADDRESS" ; ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream;`,

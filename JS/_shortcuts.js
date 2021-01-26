@@ -26,7 +26,11 @@ export const shortcuts = [
     category: "vsc",
   },
   { action: "supprimer ligne", shortcut: "maj suppr", category: "vsc" },
-
+  {
+    action: "supprimer mot précédent/suivant",
+    shortcut: "ctrl del / ctrl suppr",
+    category: "vsc",
+  },
   {
     action: "commenter le code (ligne unique)",
     shortcut: "sélectionner puis ctrl maj  /",
@@ -199,7 +203,6 @@ export const shortcuts = [
     Peut aussi être fait en ajoutant le champ "[user]" puis les lignes "email = $ email" et "name = $ username" au fichier 'config' dans : repository/.git/config ($ ls -a pour l'afficher)`,
     category: "git",
   },
-
   {
     action: "changer url origin",
     shortcut: "$ git remote set-url origin %url",

@@ -98,6 +98,11 @@ export const shortcuts = [
   },
   // CHROME
   {
+    action: "masquer barre de favoris",
+    shortcut: "ctrl maj B",
+    category: "chrome",
+  },
+  {
     action: "nettoyer local storage",
     shortcut: "localStorage.clear()",
     category: "chrome",

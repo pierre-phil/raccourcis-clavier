@@ -273,18 +273,6 @@ export const shortcuts = [
     category: "bash",
   },
   {
-    action: "installer dernière version de node",
-    shortcut: `$ npm install -g n ;
-	$ sudo n latest`,
-    category: "bash",
-  },
-  {
-    action: "installer une version précise de node",
-    shortcut: `$ nvm install v12.19.0 ;
-	pour l'utiliser $ nvm use 12.19.0 - ;`,
-    category: "bash",
-  },
-  {
     action: "renommer un dossier",
     shortcut: "$ mv %dirName1 %dirName2",
     category: "bash",
@@ -369,4 +357,23 @@ export const shortcuts = [
   },
   { action: "useEffect()", shortcut: "uef", category: "reactSnippets" },
   { action: "useState()", shortcut: "usf", category: "reactSnippets" },
+
+  // Node
+  {
+    action: "installer dernière version de node",
+    shortcut: `$ npm install -g n ;
+	$ sudo n latest`,
+    category: "node",
+  },
+  {
+    action: "installer une version précise de node",
+    shortcut: `$ nvm install v12.19.0 ;
+	pour l'utiliser $ nvm use 12.19.0 ;`,
+    category: "node",
+  },
+  {
+    action: "créer un fichier de configuration de version de Node pour Netlify",
+    shortcut: `être sur la bonne version de Node à utiliser puis dans la racine du projet, taper $ node -v > .nvmrc ; un fichier contenant la version de Node à utiliser est créé et le repo peut être poussé vers Netlify`,
+    category: "node",
+  },
 ];

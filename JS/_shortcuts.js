@@ -204,8 +204,8 @@ export const shortcuts = [
   },
   {
     action: "modifier username et email git du repo actuel",
-    shortcut: `$ git config user.name "$username" ; $ git config user.email "$email". 
-    Peut aussi être fait en ajoutant le champ "[user]" puis les lignes "email = $ email" et "name = $ username" au fichier 'config' dans : repository/.git/config ($ ls -a pour l'afficher)`,
+    shortcut: `$ git config user.name "%username" ; $ git config user.email "%email". 
+    Peut aussi être fait en ajoutant le champ "[user]" puis les lignes "email = %email" et "name = %username" au fichier 'config' dans : repository/.git/config ($ ls -a pour l'afficher)`,
     category: "git",
   },
   {
@@ -221,7 +221,7 @@ export const shortcuts = [
   {
     action:
       "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
-    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo ; On peut alors faire le pull avec $ git pull upstream; pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "FAKE ADDRESS" ; ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream;`,
+    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo ; On peut alors faire le pull avec $ git pull upstream; pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "%FAKE ADDRESS" ; ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream;`,
     category: "git",
   },
   {
@@ -274,7 +274,8 @@ export const shortcuts = [
   },
   {
     action: "renommer un dossier",
-    shortcut: "$ mv %dirName1 %dirName2",
+    shortcut:
+      "$ mv %dirName1 %dirName2 (ou chemin complet si on est à l'extérieur du dossier)",
     category: "bash",
   },
   {
@@ -298,7 +299,7 @@ export const shortcuts = [
   {
     action: `installer un package`,
     shortcut: `$ yarn add %package ;
-	ou $ yarn add %package@version ; ou en tant que "dev dependency" $ yarn add %package –D ; ou installation globale $ yarnglobal add %package`,
+	ou $ yarn add %package@%version ; ou en tant que "dev dependency" $ yarn add %package –D ; ou installation globale $ yarnglobal add %package`,
     category: "yarn",
   },
   // POSTGRESQL
@@ -367,8 +368,8 @@ export const shortcuts = [
   },
   {
     action: "installer une version précise de node",
-    shortcut: `$ nvm install v12.19.0 ;
-	pour l'utiliser $ nvm use 12.19.0 ;`,
+    shortcut: `$ nvm install v%12.19.0 ;
+	pour l'utiliser $ nvm use %12.19.0 ;`,
     category: "node",
   },
   {

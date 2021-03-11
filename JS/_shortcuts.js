@@ -253,6 +253,17 @@ export const shortcuts = [
   },
   // BASH
   {
+    action: "run un audit Lighthouse",
+    shortcut:
+      "$ lighthouse %url --view ; (le paquet lighthouse devrait être installé ainsi que Chrome (?)). $ --view permet d'ouvrir le rapport généré dans la foulée.",
+    category: "bash",
+  },
+  {
+    action: "créer un alias",
+    shortcut: `$ alias %nomAlias="%commande/chemin" ; attention pour ZSH les alias devraient se trouver dans un fichier dans /home/%user/.oh-my-zsh/custom/aliases.zsh`,
+    category: "bash",
+  },
+  {
     action: "dépaqueter un paquet",
     shortcut: "$ sudo dpkg -i %cheminFichier",
     category: "bash",

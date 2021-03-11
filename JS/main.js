@@ -14,12 +14,12 @@ const searchByAction = document.querySelector(".action");
 const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
 
-let selectedCategory = "all";
+let selectedCategory = "toutes";
 
 // find actions that match regex
 function findActions(expr, array) {
   const filteredShortcuts = array.filter((el) => {
-    if (selectedCategory === "all") {
+    if (selectedCategory === "toutes") {
       return true;
     } else {
       return el.category === selectedCategory;
@@ -35,7 +35,7 @@ function findActions(expr, array) {
 // find shortcuts that match regex
 function findShortcuts(expr, array) {
   const filteredShortcuts = array.filter((el) => {
-    if (selectedCategory === "all") {
+    if (selectedCategory === "toutes") {
       return true;
     } else {
       return el.category === selectedCategory;
@@ -84,7 +84,7 @@ function displaySearchedActions(event) {
     `;
       /*
     In fact we will have as a result 2 <span>'s around our input expression :
-    -> one entouring all the result expression
+    -> one entouring toutes the result expression
     -> one entouring only the characters that need to be highlighted
     <span class="action"><span class="highlight">comm</span>enter le code (ligne unique)</span>
     */
@@ -125,10 +125,10 @@ function displaySearchedShortcuts(event) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
-// display all the shortcuts for the first loading of the page
+// display toutes the shortcuts for the first loading of the page
 function displayResults(array) {
   const filteredShortcuts = array.filter((el) => {
-    if (selectedCategory === "all") {
+    if (selectedCategory === "toutes") {
       return true;
     } else {
       return el.category === selectedCategory;
@@ -161,7 +161,7 @@ function filterByCategory() {
 
 filterByCategory();
 
-// display all the shortcuts on first loading of the page
+// display toutes the shortcuts on first loading of the page
 displayResults(shortcuts);
 
 // display results corresponding to the expression searched in the input fields

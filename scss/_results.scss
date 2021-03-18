@@ -35,3 +35,9 @@
 .shortcut > .highlight {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 560px) {
+  .resultsArea ul li {
+    font-size: 1rem;
+  }
+}

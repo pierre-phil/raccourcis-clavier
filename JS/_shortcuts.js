@@ -196,6 +196,13 @@ export const shortcuts = [
     category: "chrome",
   },
   // GIT
+  {
+    action: "supprimer un dossier dans un repo distant",
+    shortcut: `$ git rm -r --cached %folderName ;
+	$ git commit -m "Removed folder from repository" ;
+	$ git push origin %branch`,
+    category: "git",
+  },
   { action: "voir url origin", shortcut: "$ git remote -v", category: "git" },
   {
     action: "voir username et email de git configurés globalement",
@@ -260,12 +267,7 @@ export const shortcuts = [
   },
   {
     action: "créer un alias",
-    shortcut: `$ alias %nomAlias="%commande/chemin" ; attention pour ZSH les alias devraient se trouver dans un fichier dans /home/%user/.oh-my-zsh/custom/aliases.zsh`,
-    category: "bash",
-  },
-  {
-    action: "dépaqueter un paquet",
-    shortcut: "$ sudo dpkg -i %cheminFichier",
+    shortcut: `$ alias %nomAlias="%commande/chemin" ; attention pour ZSH les alias devraient se trouver dans le fichier /home/%user/.oh-my-zsh/custom/aliases.zsh`,
     category: "bash",
   },
   {
@@ -289,13 +291,7 @@ export const shortcuts = [
       "$ mv %dirName1 %dirName2 (ou chemin complet si on est à l'extérieur du dossier)",
     category: "bash",
   },
-  {
-    action: "supprimer un dossier dans un repo distant",
-    shortcut: `$ git rm -r --cached %folderName ;
-	$ git commit -m "Removed folder from repository" ;
-	$ git push origin %branch`,
-    category: "bash",
-  },
+
   // YARN
   {
     action: `accéder au dossier "cache"`,
@@ -387,5 +383,11 @@ export const shortcuts = [
     action: "créer un fichier de configuration de version de Node pour Netlify",
     shortcut: `être sur la bonne version de Node à utiliser puis dans la racine du projet, taper $ node -v > .nvmrc ; un fichier contenant la version de Node à utiliser est créé et le repo peut être poussé vers Netlify`,
     category: "node",
+  },
+  // UBUNTU
+  {
+    action: "afficher les fichiers cachés dans l'explorateur de fichiers",
+    shortcut: "ctrl H",
+    category: "ubuntu",
   },
 ];

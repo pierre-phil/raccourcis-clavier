@@ -45,3 +45,9 @@
 hr {
   margin-top: 3rem;
 }
+
+@media screen and (max-width: 560px) {
+  .searchArea {
+    font-size: 1rem;
+  }
+}

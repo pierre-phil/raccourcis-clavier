@@ -4,9 +4,10 @@
 @import "_loader";
 
 html {
-  background-image: url("../pics/pexels-bruno-thethe-1910231.jpg");
+  background-image: url("../pics/background.webp");
   background-size: auto;
   background-attachment: fixed;
+  background-position: bottom;
 }
 
 body {

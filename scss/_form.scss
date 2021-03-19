@@ -1,47 +1,46 @@
-.display {
-  display: inline-block;
-  text-align: left;
-  max-width: 30rem;
-}
-
 .warnings {
   font-size: 0.7rem;
   line-height: 1.2rem;
   margin-bottom: 3rem;
   opacity: 0.7;
-  li {
-    list-style-type: none;
-    &:nth-child(2) span:nth-child(3) {
-      color: $red;
-      font-size: 0.8rem;
-    }
-    span {
-      color: $orange;
-      font-weight: bold;
-      font-size: 1.1rem;
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      &:nth-child(2) span:nth-child(3) {
+        color: $red;
+        font-size: 0.8rem;
+      }
+      span {
+        color: $orange;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
     }
   }
 }
 
 .searchArea {
-  margin-top: 2rem;
   font-size: 1.2rem;
-  margin-left: 2rem;
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
   label,
   * {
-    display: block;
     margin-bottom: 0.5rem;
   }
   input,
   select {
     height: 1.7rem;
-    width: 12rem;
+    max-width: 12rem;
     border-radius: 0.2rem;
     font-family: $mainFont;
     margin-bottom: 1rem;
   }
   button {
-    margin-top: 2rem;
+    max-width: 6rem;
+    margin-top: 1rem;
   }
 }
 

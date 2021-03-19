@@ -59,115 +59,121 @@
     <title>Raccourcis clavier & CLs</title>
   </head>
   <body>
-    <h1>
-      Raccourcis clavier<br />& commandlines pour devs.
-      <span role="img" aria-label="drapeau français">🇫🇷</span>
-    </h1>
-    <div class="display">
-      <div class="warnings">
-        <ul>
-          <li>/!\ Ces raccourcis sont principalement pour Linux et Windows</li>
-          <li>
-            /!\ Les lignes de commande commencent par <span>$</span> et
-            finissent par <span>;</span> (n'écrivez pas ça dans votre terminal),
-            par exemple :<br />
-            <span>$ commandLine1 ; $ commandLine2</span>
-          </li>
-          <li>
-            /!\ <span>%</span> veut dire que vous devriez remplacer par votre
-            propre valeur
-          </li>
-        </ul>
+    <main>
+      <h1>
+        Raccourcis clavier<br />& commandlines pour devs.
+        <span role="img" aria-label="drapeau français">🇫🇷</span>
+      </h1>
+      <div>
+        <div class="warnings">
+          <ul>
+            <li>
+              /!\ Ces raccourcis sont principalement pour Linux et Windows
+            </li>
+            <li>
+              /!\ Les lignes de commande commencent par <span>$</span> et
+              finissent par <span>;</span> (n'écrivez pas ça dans votre
+              terminal), par exemple :<br />
+              <span>$ commandLine1 ; $ commandLine2</span>
+            </li>
+            <li>
+              /!\ <span>%</span> veut dire que vous devriez remplacer par votre
+              propre valeur
+            </li>
+          </ul>
+        </div>
+        <section class="searchArea">
+          <form>
+            <div>
+              <label for="action">Chercher par action :</label>
+              <input
+                class="action"
+                type="text"
+                id="action"
+                name="action"
+                placeholder="action"
+              />
+            </div>
+            <div>
+              <label for="shortcut">Chercher par raccourci/commande :</label>
+              <input
+                type="text"
+                class="shortcut"
+                id="shortcut"
+                name="shortcut"
+                placeholder="raccourci"
+              />
+            </div>
+            <div class="categories">
+              <label for="categories">Filtrer par catégorie :</label>
+              <select name="categories" id="categories">
+                <option value="toutes">Toutes</option>
+                <option value="bash">Bash</option>
+                <option value="chrome">Chrome</option>
+                <option value="git">Git</option>
+                <option value="node">Node</option>
+                <option value="postgreSQL">PostgreSQL</option>
+                <option value="reactSnippets">
+                  Simple React Snippets (VSC extension)
+                </option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="vsc">VSC</option>
+                <option value="yarn">Yarn</option>
+              </select>
+            </div>
+            <div>
+              <button id="reset-btn" type="reset" value="reset">reset</button>
+            </div>
+          </form>
+        </section>
+        <hr />
       </div>
-      <section class="searchArea">
-        <form>
-          <div>
-            <label for="action">Chercher par action :</label>
-            <input
-              class="action"
-              type="text"
-              id="action"
-              name="action"
-              placeholder="action"
-            />
-          </div>
-          <div>
-            <label for="shortcut">Chercher par raccourci/commande :</label>
-            <input
-              type="text"
-              class="shortcut"
-              id="shortcut"
-              name="shortcut"
-              placeholder="raccourci"
-            />
-          </div>
-          <div class="categories">
-            <label for="categories">Filtrer par catégorie :</label>
-            <select name="categories" id="categories">
-              <option value="toutes">Toutes</option>
-              <option value="bash">Bash</option>
-              <option value="chrome">Chrome</option>
-              <option value="git">Git</option>
-              <option value="node">Node</option>
-              <option value="postgreSQL">PostgreSQL</option>
-              <option value="reactSnippets">
-                Simple React Snippets (VSC extension)
-              </option>
-              <option value="ubuntu">Ubuntu</option>
-              <option value="vsc">VSC</option>
-              <option value="yarn">Yarn</option>
-            </select>
-          </div>
-          <button id="reset-btn" type="reset" value="reset">reset</button>
-        </form>
+      <div id="loader"></div>
+      <section class="resultsArea">
+        <ul class="results"></ul>
       </section>
-      <hr />
-    </div>
-    <div id="loader"></div>
-    <section class="resultsArea">
-      <ul class="results"></ul>
-    </section>
-    <div class="credits">
-      <p>
-        Conçu et mis à jour par
-        <a
-          target="blank"
-          rel="noopener noreferrer"
-          href="https://github.com/pierre-phil"
-          title="GitHub"
-          >pierre-phil</a
-        >
-      </p>
-      <p>
-        Icons made by
-        <a
-          target="blank"
-          rel="noopener noreferrer"
-          href="https://www.flaticon.com/authors/freepik"
-          title="Freepik"
-          >Freepik</a
-        >
-        from
-        <a
-          target="blank"
-          rel="noopener noreferrer"
-          href="https://www.flaticon.com/"
-          title="Flaticon"
-          >www.flaticon.com</a
-        >
-      </p>
-      <p>
-        Photo de Bruno Thethe provenant de
-        <a
-          target="blank"
-          rel="noopener noreferrer"
-          title="Pexels"
-          href="https://www.pexels.com/fr-fr/photo/abstrait-art-artistique-beau-1910231/"
-        >
-          Pexels</a
-        >
-      </p>
-    </div>
+      <div class="credits">
+        <p>
+          Conçu et mis à jour par
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            href="https://github.com/pierre-phil"
+            title="GitHub"
+            >pierre-phil</a
+          >
+        </p>
+        <p>
+          Icons made by
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            href="https://www.flaticon.com/authors/freepik"
+            title="Freepik"
+            >Freepik</a
+          >
+          from
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            href="https://www.flaticon.com/"
+            title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </p>
+        <p>
+          Photo de Bruno Thethe provenant de
+          <a
+            target="blank"
+            rel="noopener noreferrer"
+            title="Pexels"
+            href="https://www.pexels.com/fr-fr/photo/abstrait-art-artistique-beau-1910231/"
+          >
+            Pexels</a
+          >
+        </p>
+      </div>
+    </main>
     <script type="module" src="JS/main.js"></script>
   </body>
 </html>

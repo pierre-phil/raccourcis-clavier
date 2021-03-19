@@ -16,7 +16,13 @@ body {
   box-sizing: border-box;
   color: $white;
   font-family: $mainFont;
-  text-align: center;
+}
+
+main {
+  padding: 0 1rem;
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -24,6 +30,7 @@ h1 {
   font-style: italic;
   font-size: xx-large;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .credits {
@@ -34,5 +41,10 @@ h1 {
     a {
       color: $white;
     }
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 960px) {
+  main {
   }
 }

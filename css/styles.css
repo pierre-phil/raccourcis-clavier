@@ -47,6 +47,10 @@
   margin-bottom: 1rem;
 }
 
+.searchArea button {
+  margin-top: 2rem;
+}
+
 hr {
   margin-top: 3rem;
 }

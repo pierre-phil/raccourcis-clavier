@@ -1,5 +1,6 @@
 import { shortcuts } from "./_shortcuts.js";
 
+// show loader if DOM loaded
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
@@ -10,6 +11,7 @@ document.onreadystatechange = function () {
   }
 };
 
+// variables
 const searchByAction = document.querySelector(".action");
 const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
@@ -166,3 +168,13 @@ searchByAction.addEventListener("click", displaySearchedActions);
 searchByShortcut.addEventListener("change", displaySearchedShortcuts);
 searchByShortcut.addEventListener("keyup", displaySearchedShortcuts);
 searchByShortcut.addEventListener("click", displaySearchedShortcuts);
+
+// reset function
+function resetSearch() {
+  selectedCategory = "toutes";
+  displayResults(shortcuts);
+}
+
+// reset button
+const resetBtn = document.getElementById("reset-btn");
+resetBtn.addEventListener("click", resetSearch);

@@ -69,10 +69,7 @@ function displaySearchedActions(event) {
         regex,
         `<span class="highlight">${this.value}</span>`
       );
-      const shortcut = el.shortcut.replace(
-        regex,
-        `<span class="highlight">${this.value}</span>`
-      );
+      const shortcut = el.shortcut.replace(regex, `<span>${this.value}</span>`);
       const category = el.category;
       return `<li><span class="action">
     ${action}</span> : 
@@ -103,10 +100,7 @@ function displaySearchedShortcuts(event) {
   const resultsHtml = results
     .map((el) => {
       const regex = new RegExp(this.value, "gi");
-      const action = el.action.replace(
-        regex,
-        `<span class="highlight">${this.value}</span>`
-      );
+      const action = el.action.replace(regex, `<span>${this.value}</span>`);
       const shortcut = el.shortcut.replace(
         regex,
         `<span class="highlight">${this.value}</span>`
@@ -125,7 +119,7 @@ function displaySearchedShortcuts(event) {
   resultsOutput.innerHTML = resultsHtml;
 }
 
-// display toutes the shortcuts for the first loading of the page
+// display all the shortcuts for the first loading of the page
 function displayResults(array) {
   const filteredShortcuts = array.filter((el) => {
     if (selectedCategory === "toutes") {

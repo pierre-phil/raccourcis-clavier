@@ -93,11 +93,13 @@ hr {
 }
 
 .action > .highlight {
-  text-decoration: underline;
+  background-color: #fffffc;
+  color: #000000;
 }
 
 .shortcut > .highlight {
-  text-decoration: underline;
+  background-color: #fffffc;
+  color: #000000;
 }
 
 @media screen and (max-width: 560px) {

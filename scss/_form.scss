@@ -1,23 +1,10 @@
-.warnings {
-  font-size: 0.7rem;
-  line-height: 1.2rem;
-  margin-bottom: 3rem;
-  opacity: 0.7;
-  ul {
-    padding: 0;
-    li {
-      list-style-type: none;
-      &:nth-child(2) span:nth-child(3) {
-        color: $red;
-        font-size: 0.8rem;
-      }
-      span {
-        color: $orange;
-        font-weight: bold;
-        font-size: 1.1rem;
-      }
-    }
-  }
+.warning {
+  vertical-align: super;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $orange;
+  margin: 0 0 3rem 0;
 }
 
 .searchArea {
@@ -45,5 +32,5 @@
 }
 
 hr {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }

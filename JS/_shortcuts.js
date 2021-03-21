@@ -1,69 +1,89 @@
 export const shortcuts = [
   // VSC
   {
-    action: "Recherche dans page en cours",
-    shortcut: "ctrl F",
+    action: "Recherche page en cours",
+    shortcut: `<span class="cmd">ctrl F</span>`,
     category: "vsc",
   },
   {
     action: "Masquer la barre latérale",
-    shortcut: "ctrl B",
+    shortcut: `<span class="cmd">ctrl B</span>`,
     category: "vsc",
   },
   {
     action: "Recherche globale",
-    shortcut: "ctrl maj F",
+    shortcut: `<span class="cmd">ctrl maj F</span>`,
     category: "vsc",
   },
   {
     action: "Changer occurrence en cours et suivante",
-    shortcut: "ctrl D",
+    shortcut: `<span class="cmd">ctrl D</span>`,
     category: "vsc",
   },
   {
     action: "Changer toutes les occurrences",
-    shortcut: "ctrl F2",
+    shortcut: `<span class="cmd">ctrl F2</span>`,
     category: "vsc",
   },
-  { action: "Supprimer ligne", shortcut: "maj suppr", category: "vsc" },
+  {
+    action: "Supprimer ligne",
+    shortcut: `<span class="cmd">maj suppr</span>`,
+    category: "vsc",
+  },
   {
     action: "Supprimer mot précédent/suivant",
-    shortcut: "ctrl del / ctrl suppr",
+    shortcut: `<span class="cmd">ctrl del</span> / <span class="cmd">ctrl suppr</span>`,
     category: "vsc",
   },
   {
     action: "Commenter le code (ligne unique)",
-    shortcut: "sélectionner puis ctrl maj  /",
+    shortcut: `sélectionner puis <span class="cmd">ctrl maj  /</span>`,
     category: "vsc",
   },
   {
     action: "Commenter le code (multi-ligne)",
-    shortcut: "sélectionner puis ctrl maj A",
+    shortcut: `sélectionner puis <span class="cmd">ctrl maj A</span>`,
     category: "vsc",
   },
   {
     action: "Voir où une fonction/variable est définie",
-    shortcut: "ctrl maj clic",
+    shortcut: `<span class="cmd">ctrl maj clic</span>`,
     category: "vsc",
   },
   {
     action: "Supprimer une erreur",
-    shortcut: "problems/clic droit/ignorer",
+    shortcut: `<span class="cmd">problems/clic droit/ignorer</span>`,
     category: "vsc",
   },
-  { action: "Curseur multiple", shortcut: "alt clic", category: "vsc" },
+  {
+    action: "Curseur multiple",
+    shortcut: `<span class="cmd">alt clic</span>`,
+    category: "vsc",
+  },
   {
     action: "Faire monter/descende sélection",
-    shortcut: "alt ↑/↓",
+    shortcut: `<span class="cmd">alt ↑/↓</span>`,
     category: "vsc",
   },
-  { action: "Afficher/masquer terminal", shortcut: "ctrl J", category: "vsc" },
-  { action: "Chercher et remplacer", shortcut: "ctrl H", category: "vsc" },
-  { action: "Zen mode", shortcut: "ctrl K Z", category: "vsc" },
+  {
+    action: "Afficher/masquer terminal",
+    shortcut: `<span class="cmd">ctrl J</span>`,
+    category: "vsc",
+  },
+  {
+    action: "Chercher et remplacer",
+    shortcut: `<span class="cmd">ctrl H</span>`,
+    category: "vsc",
+  },
+  {
+    action: "Zen mode",
+    shortcut: `<span class="cmd">ctrl K Z</span>`,
+    category: "vsc",
+  },
   {
     action: "Positionner terminal à droite",
     shortcut: `Pour rendre ce paramètre définitif, régler d’abord dans 
-    <span class="cmd">préférences/terminal/defaultTerminalPosition<br/></span> puis effectuer l’opération suivante : clic droit sur bouton <span class="cmd">terminal</span> au niveau de l'output VSC et sélectionner <span class="cmd">déplacer à droite (move panel right)</span>`,
+    <span class="cmd">préférences/terminal/defaultTerminalPosition</span><br/>puis effectuer l’opération suivante : clic droit sur bouton <span class="cmd">terminal</span> au niveau de l'output VSC et sélectionner <span class="cmd">déplacer à droite (move panel right)</span>`,
     category: "vsc",
   },
   {
@@ -72,128 +92,153 @@ export const shortcuts = [
     category: "vsc",
   },
   {
-    action: `Désactiver les "tips" au survol de la souris`,
-    shortcut: `Aller dans <i>file/preferences/settings/textEditor/suggestions/quickSuggestions</i> et cliquer sur <i>"edit in settings.json"</i>.<br/>Si une ligne est rajoutée automatiquement, 
-  la supprimer et	ajouter la ligne suivante :<br/><i>"editor.hover.enabled: false"</i>`,
+    action: `Désactiver les <i>tips</i> au survol de la souris`,
+    shortcut: `Aller dans <span class="cmd">file/preferences/settings/textEditor<br/>
+    /suggestions/quickSuggestions</span> et cliquer sur <span class="cmd">edit in settings.json</span>
+    <br/>Si une ligne est rajoutée automatiquement, la supprimer, puis ajouter <span class="cmd">editor.hover.enabled: false</span>`,
     category: "vsc",
   },
   {
     action: "Paramétrer un affichge combiné du terminal et des problems",
-    shortcut: `Cliquer sur le bouton <i>"terminal"</i> et le glisser-déposer dans la fenêtre <i>"problems"</i>, ou inversement`,
-    category: "vsc",
-  },
-  { action: "Cchercher un fichier", shortcut: "ctrl P", category: "vsc" },
-  { action: `Insérer le symbole "×"`, shortcut: "altGr ;", category: "vsc" },
-  { action: `Insérer le symbole "÷"`, shortcut: "altGr :", category: "vsc" },
-  { action: `Insérer le symbole "±"`, shortcut: "altGr F", category: "vsc" },
-  {
-    action: `Insérer le symbole "«" ou "»" (guillemets français)`,
-    shortcut: "altGr W / altGr X",
+    shortcut: `Cliquer sur le bouton <span class="cmd">terminal</span> et le glisser-déposer dans la fenêtre <span class="cmd">problems</span> (ou inversement)`,
     category: "vsc",
   },
   {
-    action: `Insérer le symbole "©" ou "®" (copyright/registered)`,
-    shortcut: "altGr C / altGr V",
+    action: "Chercher un fichier",
+    shortcut: `<span class="cmd">ctrl P</span>`,
+    category: "vsc",
+  },
+  {
+    action: `Insérer le symbole ×`,
+    shortcut: `<span class="cmd">altGr ;</span>`,
+    category: "vsc",
+  },
+  {
+    action: `Insérer le symbole ÷`,
+    shortcut: `<span class="cmd">altGr :</span>`,
+    category: "vsc",
+  },
+  {
+    action: `Insérer le symbole ±`,
+    shortcut: `<span class="cmd">altGr F</span>`,
+    category: "vsc",
+  },
+  {
+    action: `Insérer le symbole « »`,
+    shortcut: `<span class="cmd">altGr W</span> / <span class="cmd">altGr X</span>`,
+    category: "vsc",
+  },
+  {
+    action: `Insérer le symbole © / ®`,
+    shortcut: `<span class="cmd">altGr C</span> / <span class="cmd">altGr V</span>`,
     category: "vsc",
   },
   // CHROME
   {
     action: "Masquer barre de favoris",
     shortcut: "ctrl maj B",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "nettoyer local storage",
     shortcut: "localStorage.clear()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "recharger la page sans utiliser le cache",
     shortcut: "maj ctrl R",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "effacer le cache",
     shortcut: "ctrl maj suppr",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "ouvrir les dev tools",
     shortcut: "ctrl maj I / F12",
-    category: "chrome",
+    category: "navigateur",
   },
-  { action: "ouvrir l’inspecteur", shortcut: "ctrl maj C", category: "chrome" },
-  { action: "afficher code source", shortcut: "ctrl U", category: "chrome" },
+  {
+    action: "ouvrir l’inspecteur",
+    shortcut: "ctrl maj C",
+    category: "navigateur",
+  },
+  {
+    action: "afficher code source",
+    shortcut: "ctrl U",
+    category: "navigateur",
+  },
   {
     action: "aller à l’onglet …",
     shortcut: "ctrl 1/2/3 …",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "changer position onglet",
     shortcut: "ctrl maj top/down",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "aller en haut/bas de page",
     shortcut: "ctrl ↖/fin (tout en sélectionnant : maj)",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "page précédente/page suivante",
     shortcut: "alt ← / alt →",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action:
       "console : augmenter ou diminuer la valeur numérique d’une propriété CSS",
     shortcut: "↑/↓ / de 10 en 10 : maj ↑/↓ / de 100 en 100 : ctrl ↑/↓",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "réduire la fenêtre, laisser au premier plan ...",
     shortcut: "alt space",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "aller à la barre de recherche",
     shortcut: "alt d / ctrl l",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher sous forme de tableau",
     shortcut: "console.table()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher tous les héritages d’une variable",
     shortcut: "console.trace()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher sous forme d'erreur",
     shortcut: "console.error()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher sous forme de warning",
     shortcut: "console.warn()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher sous forme d'info",
     shortcut: "console.info()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "console: afficher les propriétés de l'objet",
     shortcut: "console.dir()",
-    category: "chrome",
+    category: "navigateur",
   },
   {
     action: "afficher la page d'accueil",
     shortcut: "alt + ↖ (début)",
-    category: "chrome",
+    category: "navigateur",
   },
   // GIT
   {

@@ -24,6 +24,7 @@ body {
 }
 
 main {
+  overflow: hidden;
   padding: 0 1rem;
   max-width: 30rem;
   margin-left: auto;
@@ -33,9 +34,9 @@ main {
 h1 {
   text-transform: uppercase;
   font-style: italic;
-  font-size: xx-large;
-  margin-bottom: 2rem;
+  font-size: x-large;
   text-align: center;
+  margin: 1.5rem 0 0 0;
 }
 
 .shortcuts-found p {
@@ -47,7 +48,8 @@ h1 {
 }
 
 .credits {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  text-align: center;
   p {
     font-size: 0.7rem;
     opacity: 0.6;

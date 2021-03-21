@@ -60,32 +60,13 @@
   </head>
   <body>
     <main>
-      <h1>
-        Raccourcis clavier<br />& commandlines pour devs.
-        <span role="img" aria-label="drapeau français">🇫🇷</span>
-      </h1>
+      <h1>Raccourcis clavier & commandlines pour devs</h1>
+      <p class="warning">(Linux & Windows)</p>
       <div>
-        <div class="warnings">
-          <ul>
-            <li>
-              /!\ Ces raccourcis sont principalement pour Linux et Windows
-            </li>
-            <li>
-              /!\ Les lignes de commande commencent par <span>$</span> et
-              finissent par <span>;</span> (n'écrivez pas ça dans votre
-              terminal), par exemple :<br />
-              <span>$ commandLine1 ; $ commandLine2</span>
-            </li>
-            <li>
-              /!\ <span>%</span> veut dire que vous devriez remplacer par votre
-              propre valeur
-            </li>
-          </ul>
-        </div>
         <section class="searchArea">
           <form>
             <div>
-              <label for="action">Chercher par action :</label>
+              <label for="action">Filtrer par action :</label>
               <input
                 class="action"
                 type="text"
@@ -95,7 +76,7 @@
               />
             </div>
             <div>
-              <label for="shortcut">Chercher par raccourci/commande :</label>
+              <label for="shortcut">Filtrer par raccourci/commande :</label>
               <input
                 type="text"
                 class="shortcut"
@@ -109,8 +90,8 @@
               <select name="categories" id="categories">
                 <option value="toutes">Toutes</option>
                 <option value="bash">Bash</option>
-                <option value="chrome">Chrome</option>
                 <option value="git">Git</option>
+                <option value="navigateur">Navigateur</option>
                 <option value="node">Node</option>
                 <option value="postgreSQL">PostgreSQL</option>
                 <option value="reactSnippets">

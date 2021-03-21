@@ -1,27 +1,10 @@
-.warnings {
-  font-size: 0.7rem;
-  line-height: 1.2rem;
-  margin-bottom: 3rem;
-  opacity: 0.7;
-}
-
-.warnings ul {
-  padding: 0;
-}
-
-.warnings ul li {
-  list-style-type: none;
-}
-
-.warnings ul li:nth-child(2) span:nth-child(3) {
-  color: #ff595e;
+.warning {
+  vertical-align: super;
+  font-style: italic;
+  text-align: center;
   font-size: 0.8rem;
-}
-
-.warnings ul li span {
   color: #ffca3a;
-  font-weight: bold;
-  font-size: 1.1rem;
+  margin: 0 0 3rem 0;
 }
 
 .searchArea {
@@ -58,7 +41,7 @@
 }
 
 hr {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 @font-face {
@@ -75,6 +58,7 @@ hr {
 }
 
 .resultsArea ul li {
+  line-height: 1.7rem;
   list-style-type: square;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -98,8 +82,8 @@ hr {
   color: #000000;
   font-weight: normal;
   font-size: 0.8rem;
-  padding: 0.1rem 0.5rem;
-  border-radius: 5px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
 }
 
 .resultsArea ul .category {
@@ -178,6 +162,7 @@ body {
 }
 
 main {
+  overflow: hidden;
   padding: 0 1rem;
   max-width: 30rem;
   margin-left: auto;
@@ -187,9 +172,9 @@ main {
 h1 {
   text-transform: uppercase;
   font-style: italic;
-  font-size: xx-large;
-  margin-bottom: 2rem;
+  font-size: x-large;
   text-align: center;
+  margin: 1.5rem 0 0 0;
 }
 
 .shortcuts-found p {
@@ -202,7 +187,8 @@ h1 {
 }
 
 .credits {
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  text-align: center;
 }
 
 .credits p {

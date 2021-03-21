@@ -54,7 +54,6 @@
 
 .searchArea button {
   max-width: 6rem;
-  margin-top: 1rem;
   border-radius: 3px;
 }
 
@@ -191,6 +190,15 @@ h1 {
   font-size: xx-large;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.shortcuts-found p {
+  margin-top: 0;
+}
+
+.shortcuts-found p span {
+  font-weight: bold;
+  color: #ff595e;
 }
 
 .credits {

@@ -38,6 +38,14 @@ h1 {
   text-align: center;
 }
 
+.shortcuts-found p {
+  margin-top: 0;
+  span {
+    font-weight: bold;
+    color: $red;
+  }
+}
+
 .credits {
   margin-bottom: 2rem;
   p {

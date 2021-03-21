@@ -12,11 +12,14 @@ document.onreadystatechange = function () {
 };
 
 // variables
+let selectedCategory = "toutes";
+
 const searchByAction = document.querySelector(".action");
 const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
 
-let selectedCategory = "toutes";
+// DOM elements
+const shortuctsNumber = document.getElementById("shortcuts-found");
 
 // find actions that match regex
 function findActions(expr, array) {
@@ -54,6 +57,7 @@ function displaySearchedActions(event) {
   const results = findActions(event.target.value, shortcuts);
   // this = input
   // console.log("results :", results);
+  shortuctsNumber.textContent = results.length;
   const resultsHtml = results
     .map((el) => {
       const regex = new RegExp(this.value, "gi");
@@ -99,6 +103,7 @@ function displaySearchedActions(event) {
 // display the expression searched in the input field highlighted in the results
 function displaySearchedShortcuts(event) {
   const results = findShortcuts(event.target.value, shortcuts);
+  shortuctsNumber.textContent = results.length;
   const resultsHtml = results
     .map((el) => {
       const regex = new RegExp(this.value, "gi");
@@ -130,7 +135,7 @@ function displayResults(array) {
       return el.category === selectedCategory;
     }
   });
-
+  shortuctsNumber.textContent = filteredShortcuts.length;
   const resultsHtml = filteredShortcuts
     .map((el) => {
       return `<li><span class="action">

@@ -62,12 +62,13 @@ export const shortcuts = [
   { action: "Zen mode", shortcut: "ctrl K Z", category: "vsc" },
   {
     action: "Positionner terminal à droite",
-    shortcut: `Pour rendre ce paramètre définitif, régler d’abord dans <i>préférences/terminal/defaultTerminalPosition</i> puis effectuer l’opération suivante :<br/>clic droit sur bouton <i>terminal</i> au niveau de <i>l'output/console VSC</i> et sélectionner <i>"déplacer à droite (move panel right)"</i>`,
+    shortcut: `Pour rendre ce paramètre définitif, régler d’abord dans 
+    <span class="cmd">préférences/terminal/defaultTerminalPosition<br/></span> puis effectuer l’opération suivante : clic droit sur bouton <span class="cmd">terminal</span> au niveau de l'output VSC et sélectionner <span class="cmd">déplacer à droite (move panel right)</span>`,
     category: "vsc",
   },
   {
     action: "Faire de prettier le formatter par défaut",
-    shortcut: `Une fois Prettier installé aller dans <i>file/preferences/settings</i> (ctrl + ,) puis chercher "default formatter", enfin sélectionner <i>esbnp.prettier-vscode</i>`,
+    shortcut: `Une fois Prettier installé aller dans <span class="cmd">file/preferences/settings</span> <span class="cmd">(ctrl ,)</span> puis chercher <span class="cmd">default formatter</span>, enfin sélectionner <span class="cmd">esbnp.prettier-vscode</span>`,
     category: "vsc",
   },
   {

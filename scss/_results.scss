@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Code";
+  src: url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+}
+
 .resultsArea {
   margin-top: 2rem;
   ul {
@@ -8,13 +13,23 @@
       margin-bottom: 1rem;
     }
     .action {
-      color: $pink;
+      color: $red;
       padding: 0.5rem 0 0.5rem 0;
-      font-family: $mainFont;
+      font-family: "Open Sans", sans-serif;
+      font-weight: bold;
     }
     .shortcut {
-      color: $red;
-      font-weight: bold;
+      font-size: 1.1rem;
+      color: $pink;
+      .cmd {
+        font-family: "Code", sans-serif;
+        background-color: $red;
+        color: $black;
+        font-weight: normal;
+        font-size: 0.8rem;
+        padding: 0.1rem 0.5rem;
+        border-radius: 5px;
+      }
     }
     .category {
       font-size: 0.8rem;
@@ -34,10 +49,4 @@
 .shortcut > .highlight {
   background-color: $white;
   color: $black;
-}
-
-@media screen and (max-width: 560px) {
-  .resultsArea ul li {
-    font-size: 1rem;
-  }
 }

@@ -35,7 +35,7 @@
     height: 1.7rem;
     max-width: 12rem;
     border-radius: 0.2rem;
-    font-family: $mainFont;
+    font-family: "Open Sans", sans-serif;
     margin-bottom: 1rem;
   }
   button {
@@ -47,10 +47,4 @@
 
 hr {
   margin-top: 3rem;
-}
-
-@media screen and (max-width: 560px) {
-  .searchArea {
-    font-size: 1rem;
-  }
 }

@@ -15,7 +15,6 @@ document.onreadystatechange = function () {
 let selectedCategory = "toutes";
 
 const searchByAction = document.querySelector(".action");
-const searchByShortcut = document.querySelector(".shortcut");
 const resultsOutput = document.querySelector(".results");
 
 // DOM elements
@@ -32,23 +31,8 @@ function findActions(expr, array) {
   });
   return filteredShortcuts.filter((el) => {
     const regex = new RegExp(expr, "gi");
-    // find matches with regex in vsc.action or vsc.shortcut
+    // find matches with regex in category.action
     return el.action.match(regex);
-  });
-}
-
-// find shortcuts that match regex
-function findShortcuts(expr, array) {
-  const filteredShortcuts = array.filter((el) => {
-    if (selectedCategory === "toutes") {
-      return true;
-    } else {
-      return el.category === selectedCategory;
-    }
-  });
-  return filteredShortcuts.filter((el) => {
-    const regex = new RegExp(expr, "gi");
-    return el.shortcut.match(regex);
   });
 }
 
@@ -75,7 +59,7 @@ function displaySearchedActions(event) {
         regex,
         `<span class="highlight">${this.value}</span>`
       );
-      const shortcut = el.shortcut.replace(regex, `<span>${this.value}</span>`);
+      const shortcut = el.shortcut;
       const category = el.category;
       return `<li><span class="action">
     ${action}</span> : 
@@ -96,32 +80,6 @@ function displaySearchedActions(event) {
     As results is an array of objects, this prevents to have commas ","
     between different results
     */
-    .join("");
-  resultsOutput.innerHTML = resultsHtml;
-}
-
-// display the expression searched in the input field highlighted in the results
-function displaySearchedShortcuts(event) {
-  const results = findShortcuts(event.target.value, shortcuts);
-  shortuctsNumber.textContent = results.length;
-  const resultsHtml = results
-    .map((el) => {
-      const regex = new RegExp(this.value, "gi");
-      const action = el.action.replace(regex, `<span>${this.value}</span>`);
-      const shortcut = el.shortcut.replace(
-        regex,
-        `<span class="highlight">${this.value}</span>`
-      );
-      const category = el.category;
-      //console.log(`%c${shortcut}`, `color:orange`);
-      return `<li><span class="action">
-    ${action}</span> : 
-    <br /><span class="shortcut">
-    ${shortcut}</span>
-    <br/>
-    <span class="category">${category}</span>
-    </li>`;
-    })
     .join("");
   resultsOutput.innerHTML = resultsHtml;
 }
@@ -162,17 +120,13 @@ function filterByCategory() {
 
 filterByCategory();
 
-// display toutes the shortcuts on first loading of the page
+// display all the shortcuts on first loading of the page
 displayResults(shortcuts);
 
 // display results corresponding to the expression searched in the input fields
 searchByAction.addEventListener("change", displaySearchedActions);
 searchByAction.addEventListener("keyup", displaySearchedActions);
 searchByAction.addEventListener("click", displaySearchedActions);
-
-searchByShortcut.addEventListener("change", displaySearchedShortcuts);
-searchByShortcut.addEventListener("keyup", displaySearchedShortcuts);
-searchByShortcut.addEventListener("click", displaySearchedShortcuts);
 
 // reset function
 function resetSearch() {

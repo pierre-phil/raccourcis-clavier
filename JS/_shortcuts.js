@@ -133,7 +133,7 @@ export const shortcuts = [
     shortcut: `<span class="cmd">altGr C</span> / <span class="cmd">altGr V</span>`,
     category: "vsc",
   },
-  // CHROME
+  // NAVIGATEUR
   {
     action: "Masquer barre de favoris",
     shortcut: "ctrl maj B",

@@ -312,35 +312,34 @@ export const shortcuts = [
   },
   // BASH
   {
-    action: "run un audit Lighthouse",
-    shortcut:
-      "$ lighthouse %url --view ; (le paquet lighthouse devrait être installé ainsi que Chrome (?)). $ --view permet d'ouvrir le rapport généré dans la foulée.",
+    action: "Run un audit Lighthouse",
+    shortcut: `<pre><code>lighthouse $url --view</code></pre>Le paquet <code>lighthouse</code> doit être installé ainsi que Chrome (?)<br/><code>--view</code> permet d'ouvrir le rapport généré dans la foulée.`,
     category: "bash",
   },
   {
     action: "créer un alias",
-    shortcut: `$ alias %nomAlias="%commande/chemin" ; attention pour ZSH les alias devraient se trouver dans le fichier /home/%user/.oh-my-zsh/custom/aliases.zsh`,
+    shortcut: `<pre><code>alias $nomAlias="$commande/chemin"</pre></code>Attention pour ZSH les alias devraient se trouver dans le fichier : <pre><code>/home/$user/.oh-my-zsh/custom/aliases.zsh</pre></code>`,
     category: "bash",
   },
   {
     action: "interrompre processus en cours",
-    shortcut: "ctrl C",
+    shortcut: "<code>ctrl C</code>",
     category: "bash",
   },
   {
     action: "visualiser T°C CPU",
-    shortcut: "$ watch sensors (lm-sensors doit être installé)",
+    shortcut:
+      "<pre><code>watch sensors</code></pre><code>lm-sensors</code> doit être installé)",
     category: "bash",
   },
   {
     action: "copier/coller dans le terminal",
-    shortcut: "ctrl maj C / ctrl maj V",
+    shortcut: "<code>ctrl maj C</code> / <code>ctrl maj V</code>",
     category: "bash",
   },
   {
     action: "renommer un dossier",
-    shortcut:
-      "$ mv %dirName1 %dirName2 (ou chemin complet si on est à l'extérieur du dossier)",
+    shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (ou chemin complet si on est à l'extérieur du dossier)`,
     category: "bash",
   },
 

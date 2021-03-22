@@ -23,7 +23,24 @@
     .shortcut {
       font-size: 1.1rem;
       color: $pink;
-      .cmd {
+      pre {
+        background-color: $grey;
+        border-radius: 5px;
+        max-width: 35rem;
+        padding: 1rem;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        code {
+          color: white;
+          background: none;
+          font-size: 0.9rem;
+        }
+      }
+      code {
         font-family: "Code", sans-serif;
         background-color: $red;
         color: $black;

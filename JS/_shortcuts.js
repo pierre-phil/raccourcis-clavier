@@ -2,135 +2,142 @@ export const shortcuts = [
   // VSC
   {
     action: "Recherche page en cours",
-    shortcut: `<span class="cmd">ctrl F</span>`,
+    shortcut: `<code>ctrl F</code>`,
     category: "vsc",
   },
   {
     action: "Masquer la barre latérale",
-    shortcut: `<span class="cmd">ctrl B</span>`,
+    shortcut: `<code>ctrl B</code>`,
     category: "vsc",
   },
   {
     action: "Recherche globale",
-    shortcut: `<span class="cmd">ctrl maj F</span>`,
+    shortcut: `<code>ctrl maj F</code>`,
     category: "vsc",
   },
   {
     action: "Changer occurrence en cours et suivante",
-    shortcut: `<span class="cmd">ctrl D</span>`,
+    shortcut: `<code>ctrl D</code>`,
     category: "vsc",
   },
   {
     action: "Changer toutes les occurrences",
-    shortcut: `<span class="cmd">ctrl F2</span>`,
+    shortcut: `<code>ctrl F2</code>`,
     category: "vsc",
   },
   {
     action: "Supprimer ligne",
-    shortcut: `<span class="cmd">maj suppr</span>`,
+    shortcut: `<code>maj suppr</code>`,
     category: "vsc",
   },
   {
     action: "Supprimer mot précédent/suivant",
-    shortcut: `<span class="cmd">ctrl del</span> / <span class="cmd">ctrl suppr</span>`,
+    shortcut: `<code>ctrl del</code> / <code>ctrl suppr</code>`,
     category: "vsc",
   },
   {
     action: "Commenter le code (ligne unique)",
-    shortcut: `sélectionner puis <span class="cmd">ctrl maj  /</span>`,
+    shortcut: `sélectionner puis <code>ctrl maj  /</code>`,
     category: "vsc",
   },
   {
     action: "Commenter le code (multi-ligne)",
-    shortcut: `sélectionner puis <span class="cmd">ctrl maj A</span>`,
+    shortcut: `sélectionner puis <code>ctrl maj A</code>`,
     category: "vsc",
   },
   {
     action: "Voir où une fonction/variable est définie",
-    shortcut: `<span class="cmd">ctrl maj clic</span>`,
+    shortcut: `<code>ctrl maj clic</code>`,
     category: "vsc",
   },
   {
     action: "Supprimer une erreur",
-    shortcut: `<span class="cmd">problems/clic droit/ignorer</span>`,
+    shortcut: `<code>problems/clic droit/ignorer</code>`,
     category: "vsc",
   },
   {
     action: "Curseur multiple",
-    shortcut: `<span class="cmd">alt clic</span>`,
+    shortcut: `<code>alt clic</code>`,
     category: "vsc",
   },
   {
     action: "Faire monter/descende sélection",
-    shortcut: `<span class="cmd">alt ↑/↓</span>`,
+    shortcut: `<code>alt ↑/↓</code>`,
     category: "vsc",
   },
   {
     action: "Afficher/masquer terminal",
-    shortcut: `<span class="cmd">ctrl J</span>`,
+    shortcut: `<code>ctrl J</code>`,
     category: "vsc",
   },
   {
     action: "Chercher et remplacer",
-    shortcut: `<span class="cmd">ctrl H</span>`,
+    shortcut: `<code>ctrl H</code>`,
     category: "vsc",
   },
   {
     action: "Zen mode",
-    shortcut: `<span class="cmd">ctrl K Z</span>`,
+    shortcut: `<code>ctrl K Z</code>`,
     category: "vsc",
   },
   {
     action: "Positionner terminal à droite",
     shortcut: `Pour rendre ce paramètre définitif, régler d’abord dans 
-    <span class="cmd">préférences/terminal/defaultTerminalPosition</span><br/>puis effectuer l’opération suivante : clic droit sur bouton <span class="cmd">terminal</span> au niveau de l'output VSC et sélectionner <span class="cmd">déplacer à droite (move panel right)</span>`,
+    <code>préférences/terminal/defaultTerminalPosition</code><br/>puis effectuer l’opération suivante : clic droit sur bouton <code>terminal</code> au niveau de l'output VSC et sélectionner <code>déplacer à droite (move panel right)</code>`,
     category: "vsc",
   },
   {
     action: "Faire de prettier le formatter par défaut",
-    shortcut: `Une fois Prettier installé aller dans <span class="cmd">file/preferences/settings</span> <span class="cmd">(ctrl ,)</span> puis chercher <span class="cmd">default formatter</span>, enfin sélectionner <span class="cmd">esbnp.prettier-vscode</span>`,
+    shortcut: `Une fois Prettier installé aller dans <pre><code>file/preferences/settings</code></pre> raccourci : <code>ctrl ,</code> puis chercher <code>default formatter</code>, enfin sélectionner <code>"esbnp.prettier-vscode"</code>`,
     category: "vsc",
   },
   {
     action: `Désactiver les <i>tips</i> au survol de la souris`,
-    shortcut: `Aller dans <span class="cmd">file/preferences/settings/textEditor<br/>
-    /suggestions/quickSuggestions</span> et cliquer sur <span class="cmd">edit in settings.json</span>
-    <br/>Si une ligne est rajoutée automatiquement, la supprimer, puis ajouter <span class="cmd">editor.hover.enabled: false</span>`,
+    shortcut: `Aller dans <pre><code>file/preferences/settings/textEditor/suggestions/quickSuggestions</code></pre> et cliquer sur <code>edit in settings.json</code>
+    <br/>Si une ligne est rajoutée automatiquement, la supprimer, puis ajouter <code>"editor.hover.enabled": "false"</code>`,
     category: "vsc",
   },
   {
     action: "Paramétrer un affichge combiné du terminal et des problems",
-    shortcut: `Cliquer sur le bouton <span class="cmd">terminal</span> et le glisser-déposer dans la fenêtre <span class="cmd">problems</span> (ou inversement)`,
+    shortcut: `Cliquer sur le bouton <code>terminal</code> et le glisser-déposer dans la fenêtre <code>problems</code> (ou inversement)`,
     category: "vsc",
   },
   {
     action: "Chercher un fichier",
-    shortcut: `<span class="cmd">ctrl P</span>`,
+    shortcut: `<code>ctrl P</code>`,
     category: "vsc",
   },
   {
     action: `Insérer le symbole ×`,
-    shortcut: `<span class="cmd">altGr ;</span>`,
+    shortcut: `<code>altGr ;</code>`,
     category: "vsc",
   },
   {
     action: `Insérer le symbole ÷`,
-    shortcut: `<span class="cmd">altGr :</span>`,
+    shortcut: `<code>altGr :</code>`,
     category: "vsc",
   },
   {
     action: `Insérer le symbole ±`,
-    shortcut: `<span class="cmd">altGr F</span>`,
+    shortcut: `<code>altGr F</code>`,
     category: "vsc",
   },
   {
     action: `Insérer le symbole « »`,
-    shortcut: `<span class="cmd">altGr W</span> / <span class="cmd">altGr X</span>`,
+    shortcut: `<code>altGr W</code> / <code>altGr X</code>`,
     category: "vsc",
   },
   {
     action: `Insérer le symbole © / ®`,
-    shortcut: `<span class="cmd">altGr C</span> / <span class="cmd">altGr V</span>`,
+    shortcut: `<code>altGr C</code> / <code>altGr V</code>`,
+    category: "vsc",
+  },
+  {
+    action: `Changer la couleur du texte sélectionné`,
+    shortcut: `Aller dans les préférences <code>ctrl ,</code> et chercher <code>Workbench: Color Customizations</code><br/>
+    Modifier dans <code>settings.json</code> et ajouter : <pre><code>"workbench.colorCustomizations": {
+      "editor.selectionBackground": "#135564",
+    }</pre></code> en remplaçant par la couleur de votre choix.`,
     category: "vsc",
   },
   // NAVIGATEUR

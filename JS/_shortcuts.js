@@ -136,178 +136,196 @@ export const shortcuts = [
     action: `Changer la couleur du texte sélectionné`,
     shortcut: `Aller dans les préférences <code>ctrl ,</code> et chercher <code>Workbench: Color Customizations</code><br/>
     Modifier dans <code>settings.json</code> et ajouter : <pre><code>"workbench.colorCustomizations": {
-      "editor.selectionBackground": "#135564",
-    }</pre></code> en remplaçant par la couleur de votre choix.`,
+    "editor.selectionBackground": "#135564",
+}</pre></code> en remplaçant par la couleur de votre choix.`,
     category: "vsc",
   },
   // NAVIGATEUR
   {
     action: "Masquer barre de favoris",
-    shortcut: "ctrl maj B",
+    shortcut: "<code>ctrl maj B</code>",
     category: "navigateur",
   },
   {
     action: "nettoyer local storage",
-    shortcut: "localStorage.clear()",
+    shortcut: "<pre><code>localStorage.clear()</code></pre>",
     category: "navigateur",
   },
   {
     action: "recharger la page sans utiliser le cache",
-    shortcut: "maj ctrl R",
+    shortcut: "<code>maj ctrl R</code>",
     category: "navigateur",
   },
   {
     action: "effacer le cache",
-    shortcut: "ctrl maj suppr",
+    shortcut: "<code>ctrl maj suppr</code>",
     category: "navigateur",
   },
   {
     action: "ouvrir les dev tools",
-    shortcut: "ctrl maj I / F12",
+    shortcut: "<code>ctrl maj I</code> / <code>F12</code>",
     category: "navigateur",
   },
   {
     action: "ouvrir l’inspecteur",
-    shortcut: "ctrl maj C",
+    shortcut: "<code>ctrl maj C</code>",
     category: "navigateur",
   },
   {
     action: "afficher code source",
-    shortcut: "ctrl U",
+    shortcut: "<code>ctrl U</code>",
     category: "navigateur",
   },
   {
     action: "aller à l’onglet …",
-    shortcut: "ctrl 1/2/3 …",
+    shortcut: "<code>ctrl 1/2/3 …</code>",
     category: "navigateur",
   },
   {
     action: "changer position onglet",
-    shortcut: "ctrl maj top/down",
+    shortcut: "<code>ctrl maj top/down</code>",
     category: "navigateur",
   },
   {
     action: "aller en haut/bas de page",
-    shortcut: "ctrl ↖/fin (tout en sélectionnant : maj)",
+    shortcut:
+      "<code>ctrl ↖</code> / <code>ctrl fin</code> (tout en sélectionnant : ajouter <code>maj</code>)",
     category: "navigateur",
   },
   {
     action: "page précédente/page suivante",
-    shortcut: "alt ← / alt →",
+    shortcut: "<code>alt ←</code> / <code>alt →</code>",
     category: "navigateur",
   },
   {
     action:
       "console : augmenter ou diminuer la valeur numérique d’une propriété CSS",
-    shortcut: "↑/↓ / de 10 en 10 : maj ↑/↓ / de 100 en 100 : ctrl ↑/↓",
+    shortcut:
+      "<code>↑/↓</code><br/>de 10 en 10 : <code>maj ↑/↓</code><br/>de 100 en 100 : <code>ctrl ↑/↓</code>",
     category: "navigateur",
   },
   {
     action: "réduire la fenêtre, laisser au premier plan ...",
-    shortcut: "alt space",
+    shortcut: "<code>alt space</code>",
     category: "navigateur",
   },
   {
     action: "aller à la barre de recherche",
-    shortcut: "alt d / ctrl l",
+    shortcut: "<code>alt d</code> / <code>ctrl l</code>",
     category: "navigateur",
   },
   {
     action: "console: afficher sous forme de tableau",
-    shortcut: "console.table()",
+    shortcut: "<pre><code>console.table()</pre></code>",
     category: "navigateur",
   },
   {
     action: "console: afficher tous les héritages d’une variable",
-    shortcut: "console.trace()",
+    shortcut: "<pre><code>console.trace()</pre></code>",
     category: "navigateur",
   },
   {
     action: "console: afficher sous forme d'erreur",
-    shortcut: "console.error()",
+    shortcut: "<pre><code>console.error()</pre></code>",
     category: "navigateur",
   },
   {
     action: "console: afficher sous forme de warning",
-    shortcut: "console.warn()",
+    shortcut: "<pre><code>console.warn()</pre></code>",
     category: "navigateur",
   },
   {
     action: "console: afficher sous forme d'info",
-    shortcut: "console.info()",
+    shortcut: "<pre><code>console.info()</pre></code>",
     category: "navigateur",
   },
   {
     action: "console: afficher les propriétés de l'objet",
-    shortcut: "console.dir()",
+    shortcut: "<pre><code>console.dir()</pre></code>",
     category: "navigateur",
   },
   {
     action: "afficher la page d'accueil",
-    shortcut: "alt + ↖ (début)",
+    shortcut: "<code>alt ↖</code>",
     category: "navigateur",
   },
   // GIT
   {
     action: "supprimer un dossier dans un repo distant",
-    shortcut: `$ git rm -r --cached %folderName ;
-	$ git commit -m "Removed folder from repository" ;
-	$ git push origin %branch`,
+    shortcut: `<pre><code>git rm -r --cached $folderName
+git commit -m "Removed folder from repository"
+git push origin $branch</pre></code>`,
     category: "git",
   },
-  { action: "voir url origin", shortcut: "$ git remote -v", category: "git" },
+  {
+    action: "voir url origin",
+    shortcut: "<pre><code>git remote -v</pre></code>",
+    category: "git",
+  },
   {
     action: "voir username et email de git configurés globalement",
-    shortcut: "$ git config --list",
+    shortcut: "<pre><code>git config --list</pre></code>",
     category: "git",
   },
   {
     action: "modifier username et email git du repo actuel",
-    shortcut: `$ git config user.name "%username" ; $ git config user.email "%email". 
-    Peut aussi être fait en ajoutant le champ "[user]" puis les lignes "email = %email" et "name = %username" au fichier 'config' dans : repository/.git/config ($ ls -a pour l'afficher)`,
+    shortcut: `
+    <pre><code>git config user.name "%username"
+git config user.email "%email"
+</pre></code>
+    Peut aussi être fait en ajoutant le champ <code>user</code> puis les lignes <code>email = "$email"</code> et <code>name = "$username"</code> au fichier <code>repository/.git/config</code> (<code>ls -a</code> pour l'afficher)`,
     category: "git",
   },
   {
     action: "changer url origin",
-    shortcut: "$ git remote set-url origin %url",
+    shortcut: "<pre><code>git remote set-url origin $url</pre></code>",
     category: "git",
   },
   {
     action: "ajouter url origin",
-    shortcut: "$ git remote add origin %url ; $ git remote -v",
+    shortcut: `<pre><code>git remote add origin $url
+git remote -v</pre></code>`,
     category: "git",
   },
   {
     action:
       "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
-    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer $ git remote add upstream %urlRepo ; On peut alors faire le pull avec $ git pull upstream; pour se prémunir de push nos modif dans ce repo faire $ git config remote.upstream.pushurl "%FAKE ADDRESS" ; ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un $ git push upstream;`,
+    shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer puis :
+    <pre><code>git remote add upstream $urlRepo</pre></code>
+     On peut alors faire le pull avec <code>git pull upstream</code><br/>
+     Pour se prémunir de push nos modif dans ce repo on peut faire 
+     <pre><code>git config remote.upstream.pushurl "$fakeRepoUrl"</pre></code>
+     Ainsi avec cet url inexistant git retournera une erreur si par mégarde on fait un <code>git push upstream</code>`,
     category: "git",
   },
   {
     action: "revenir à un précédent commit",
-    shortcut: `$ git checkout %identifiantDuCommit ; (le trouver sur github ou 	en faisant $ git 	log). Cela nous replace sur le commit sélectionné.
-	Pour push il faudra l’envoyer sur une nouvelle branche : $ git checkout -b %nomNouvelleBranche %identifiantDuCommit`,
+    shortcut: `<pre><code>git checkout $identifiantDuCommit</pre></code>
+    (le trouver sur github ou 	en faisant <code>git 	log</code>). Cela nous replace sur le commit sélectionné.
+	Pour push il faudra l’envoyer sur une nouvelle branche : 
+  <pre><code>$ git checkout -b $nomNouvelleBranche $identifiantDuCommit</pre></code>`,
     category: "git",
   },
   {
     action: "push une branche locale en remote",
-    shortcut: `se placer sur la branche à pousser avec $ git checkout ; puis
-	$ git push --set-upstream origin %branche ;	$ git branch`,
+    shortcut: `se placer sur la branche à pousser avec <code>git checkout</code> puis :
+    <pre><code>git push --set-upstream origin $branche
+git branch</pre></code>`,
     category: "git",
   },
   {
     action: "supprimer une branche locale",
-    shortcut: "$ git branch -d %branche",
+    shortcut: "<pre><code>git branch -d $branche</pre></code>",
     category: "git",
   },
   {
     action: "supprimer une branche distante",
-    shortcut: "$ git push origin --delete %branche",
+    shortcut: "<pre><code>git push origin --delete $branche</pre></code>",
     category: "git",
   },
   {
     action: "changer url origin",
-    shortcut: "$ git remote set-url origin %urlRemote",
+    shortcut: "<pre><code>git remote set-url origin $urlRemote</pre></code>",
     category: "git",
   },
   // BASH
@@ -339,7 +357,7 @@ export const shortcuts = [
   },
   {
     action: "renommer un dossier",
-    shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (ou chemin complet si on est à l'extérieur du dossier)`,
+    shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (renseigner les chemins complets si vous êtes à l'extérieur du dossier où les dossiers doivent être supprimés)`,
     category: "bash",
   },
 

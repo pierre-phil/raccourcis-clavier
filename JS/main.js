@@ -96,12 +96,14 @@ function displayResults(array) {
   shortuctsNumber.textContent = filteredShortcuts.length;
   const resultsHtml = filteredShortcuts
     .map((el) => {
-      return `<li><span class="action">
-  ${el.action}</span> : 
+      return `
+      <li>
+      <span class="category">${el.category}</span><br/>
+      <span class="action">
+  ${el.action} :</span>
   <br /><span class="shortcut">
   ${el.shortcut}</span>
-  <br/>
-  <span class="category">${el.category}</span>`;
+`;
     })
     .join("");
   resultsOutput.innerHTML = resultsHtml;

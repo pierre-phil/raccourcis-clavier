@@ -56,6 +56,8 @@ hr {
 
 .resultsArea .individual-result {
   margin-bottom: 3.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding-left: 1rem;
 }
 
 .resultsArea .individual-result .category {

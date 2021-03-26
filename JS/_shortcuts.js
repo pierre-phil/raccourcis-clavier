@@ -152,128 +152,133 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "nettoyer local storage",
+    action: "Nettoyer <i>local storage</i>",
     shortcut: "<pre><code>localStorage.clear()</code></pre>",
     category: "navigateur",
   },
   {
-    action: "recharger la page sans utiliser le cache",
-    shortcut: "<code>maj ctrl R</code>",
+    action: "Recharger la page sans utiliser le cache",
+    shortcut: "<code>ctrl F5</code> / <code>ctrl maj R</code>",
     category: "navigateur",
   },
   {
-    action: "effacer le cache",
+    action: "Supprimer le cache, l'historique ...",
     shortcut: "<code>ctrl maj suppr</code>",
     category: "navigateur",
   },
   {
-    action: "ouvrir les dev tools",
+    action: "Effacer le cache",
+    shortcut: "<code>ctrl maj suppr</>",
+    category: "navigateur",
+  },
+  {
+    action: "Ouvrir les <i>dev tools</i>",
     shortcut: "<code>ctrl maj I</code> / <code>F12</code>",
     category: "navigateur",
   },
   {
-    action: "ouvrir l’inspecteur",
+    action: "Ouvrir l’inspecteur",
     shortcut: "<code>ctrl maj C</code>",
     category: "navigateur",
   },
   {
-    action: "afficher code source",
+    action: "Afficher code source",
     shortcut: "<code>ctrl U</code>",
     category: "navigateur",
   },
   {
-    action: "aller à l’onglet …",
+    action: "Aller à l’onglet 1/2/3 …",
     shortcut: "<code>ctrl 1/2/3 …</code>",
     category: "navigateur",
   },
   {
-    action: "changer position onglet",
+    action: "Changer position onglet",
     shortcut: "<code>ctrl maj top/down</code>",
     category: "navigateur",
   },
   {
-    action: "aller en haut/bas de page",
+    action: "Aller en haut/bas de page",
     shortcut:
       "<code>ctrl ↖</code> / <code>ctrl fin</code> (tout en sélectionnant : ajouter <code>maj</code>)",
     category: "navigateur",
   },
   {
-    action: "page précédente/page suivante",
+    action: "Page précédente/page suivante",
     shortcut: "<code>alt ←</code> / <code>alt →</code>",
     category: "navigateur",
   },
   {
     action:
-      "console : augmenter ou diminuer la valeur numérique d’une propriété CSS",
+      "Console : augmenter ou diminuer la valeur numérique d’une propriété CSS",
     shortcut:
       "<code>↑/↓</code><br/>de 10 en 10 : <code>maj ↑/↓</code><br/>de 100 en 100 : <code>ctrl ↑/↓</code>",
     category: "navigateur",
   },
   {
-    action: "réduire la fenêtre, laisser au premier plan ...",
+    action: "Réduire la fenêtre, laisser au premier plan ...",
     shortcut: "<code>alt space</code>",
     category: "navigateur",
   },
   {
-    action: "aller à la barre de recherche",
+    action: "Aller à la barre de recherche",
     shortcut: "<code>alt d</code> / <code>ctrl l</code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher sous forme de tableau",
+    action: "Console : afficher sous forme de tableau",
     shortcut: "<pre><code>console.table()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher tous les héritages d’une variable",
+    action: "Console : afficher tous les héritages d’une variable",
     shortcut: "<pre><code>console.trace()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher sous forme d'erreur",
+    action: "Console : afficher sous forme d'erreur",
     shortcut: "<pre><code>console.error()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher sous forme de warning",
+    action: "Console : afficher sous forme de warning",
     shortcut: "<pre><code>console.warn()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher sous forme d'info",
+    action: "Console : afficher sous forme d'info",
     shortcut: "<pre><code>console.info()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "console: afficher les propriétés de l'objet",
+    action: "Console : afficher les propriétés de l'objet",
     shortcut: "<pre><code>console.dir()</pre></code>",
     category: "navigateur",
   },
   {
-    action: "afficher la page d'accueil",
+    action: "Afficher la page d'accueil",
     shortcut: "<code>alt ↖</code>",
     category: "navigateur",
   },
   // GIT
   {
-    action: "supprimer un dossier dans un repo distant",
+    action: "Supprimer un dossier dans un repo distant",
     shortcut: `<pre><code>git rm -r --cached $folderName
 git commit -m "Removed folder from repository"
 git push origin $branch</pre></code>`,
     category: "git",
   },
   {
-    action: "voir url origin",
+    action: "Voir <i>url origin</i>",
     shortcut: "<pre><code>git remote -v</pre></code>",
     category: "git",
   },
   {
-    action: "voir username et email de git configurés globalement",
+    action: "Voir <i>username</i> et <i>email</i> de configurés globalement",
     shortcut: "<pre><code>git config --list</pre></code>",
     category: "git",
   },
   {
-    action: "modifier username et email git du repo actuel",
+    action: "Modifier <i>username</i> et <i>email</i> du repo actuel",
     shortcut: `
     <pre><code>git config user.name "%username"
 git config user.email "%email"
@@ -282,19 +287,19 @@ git config user.email "%email"
     category: "git",
   },
   {
-    action: "changer url origin",
+    action: "Modifier <i>url origin</i>",
     shortcut: "<pre><code>git remote set-url origin $url</pre></code>",
     category: "git",
   },
   {
-    action: "ajouter url origin",
+    action: "Ajouter <i>url origin</i>",
     shortcut: `<pre><code>git remote add origin $url
 git remote -v</pre></code>`,
     category: "git",
   },
   {
     action:
-      "récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
+      "Récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
     shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer puis :
     <pre><code>git remote add upstream $urlRepo</pre></code>
      On peut alors faire le pull avec <code>git pull upstream</code><br/>
@@ -304,7 +309,7 @@ git remote -v</pre></code>`,
     category: "git",
   },
   {
-    action: "revenir à un précédent commit",
+    action: "Revenir à un précédent commit",
     shortcut: `<pre><code>git checkout $identifiantDuCommit</pre></code>
     (le trouver sur github ou 	en faisant <code>git 	log</code>). Cela nous replace sur le commit sélectionné.
 	Pour push il faudra l’envoyer sur une nouvelle branche : 
@@ -312,24 +317,24 @@ git remote -v</pre></code>`,
     category: "git",
   },
   {
-    action: "push une branche locale en remote",
+    action: "Push une branche locale en remote",
     shortcut: `se placer sur la branche à pousser avec <code>git checkout</code> puis :
     <pre><code>git push --set-upstream origin $branche
 git branch</pre></code>`,
     category: "git",
   },
   {
-    action: "supprimer une branche locale",
+    action: "Supprimer une branche locale",
     shortcut: "<pre><code>git branch -d $branche</pre></code>",
     category: "git",
   },
   {
-    action: "supprimer une branche distante",
+    action: "Supprimer une branche distante",
     shortcut: "<pre><code>git push origin --delete $branche</pre></code>",
     category: "git",
   },
   {
-    action: "changer url origin",
+    action: "Changer url origin",
     shortcut: "<pre><code>git remote set-url origin $urlRemote</pre></code>",
     category: "git",
   },
@@ -340,47 +345,52 @@ git branch</pre></code>`,
     category: "bash",
   },
   {
-    action: "créer un alias",
+    action: "Créer un alias",
     shortcut: `<pre><code>alias $nomAlias="$commande/chemin"</pre></code>Attention pour ZSH les alias devraient se trouver dans le fichier : <pre><code>/home/$user/.oh-my-zsh/custom/aliases.zsh</pre></code>`,
     category: "bash",
   },
   {
-    action: "interrompre processus en cours",
+    action: "Interrompre processus en cours",
     shortcut: "<code>ctrl C</code>",
     category: "bash",
   },
   {
-    action: "visualiser T°C CPU",
+    action: "Visualiser T°C CPU",
     shortcut:
       "<pre><code>watch sensors</code></pre><code>lm-sensors</code> doit être installé)",
     category: "bash",
   },
   {
-    action: "copier/coller dans le terminal",
+    action: "Copier/coller dans le terminal",
     shortcut: "<code>ctrl maj C</code> / <code>ctrl maj V</code>",
     category: "bash",
   },
   {
-    action: "renommer un dossier",
+    action: "Renommer un dossier",
     shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (renseigner les chemins complets si vous êtes à l'extérieur du dossier où les dossiers doivent être supprimés)`,
     category: "bash",
   },
 
   // YARN
   {
-    action: `accéder au dossier "cache"`,
-    shortcut: "$ yarn cache list",
+    action: `Accéder au dossier <i>cache</i>`,
+    shortcut: "<code>yarn cache list</code>",
     category: "yarn",
   },
   {
-    action: `installer les dépendances depuis "package.json"`,
-    shortcut: "$ yarn",
+    action: `Installer les dépendances depuis <i>package.json</i>`,
+    shortcut: "<code>yarn</code>",
     category: "yarn",
   },
   {
-    action: `installer un package`,
-    shortcut: `$ yarn add %package ;
-	ou $ yarn add %package@%version ; ou en tant que "dev dependency" $ yarn add %package –D ; ou installation globale $ yarnglobal add %package`,
+    action: `Installer un package`,
+    shortcut: `<pre><code>yarn add $package</pre></code>
+	Une version précise :
+  <pre><code>yarn add $package@$version</pre></code>
+  En tant que <i>dev dependency</i> :
+  <pre><code>yarn add $package –D</pre></code>
+  Installation globale 
+  <pre><code>yarnglobal add $package</pre></code>`,
     category: "yarn",
   },
   // POSTGRESQL

@@ -6,6 +6,11 @@ export const shortcuts = [
     category: "vsc",
   },
   {
+    action: "Renommer une variable/fonction",
+    shortcut: `<code>F2</code>`,
+    category: "vsc",
+  },
+  {
     action: "Masquer la barre latérale",
     shortcut: `<code>ctrl B</code>`,
     category: "vsc",

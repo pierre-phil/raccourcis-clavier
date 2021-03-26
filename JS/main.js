@@ -15,7 +15,7 @@ document.onreadystatechange = function () {
 let selectedCategory = "toutes";
 
 const searchByAction = document.querySelector(".action");
-const resultsOutput = document.querySelector(".results");
+const resultsOutput = document.querySelector(".resultsArea");
 
 // DOM elements
 const shortuctsNumber = document.getElementById("shortcuts-found");
@@ -61,13 +61,11 @@ function displaySearchedActions(event) {
       );
       const shortcut = el.shortcut;
       const category = el.category;
-      return `<li><span class="action">
-    ${action}</span> : 
-    <br /><span class="shortcut">
-    ${shortcut}</span>
-    <br/>
-    <span class="category">${category}</span>
-</li>
+      return `<div class="individual-result">
+      <span class="category">${category}</span>
+      <p class="action">${action}</p>
+  <span class="shortcut">${shortcut}</span>
+  </div>
     `;
       /*
     In fact we will have as a result 2 <span>'s around our input expression :
@@ -96,13 +94,11 @@ function displayResults(array) {
   shortuctsNumber.textContent = filteredShortcuts.length;
   const resultsHtml = filteredShortcuts
     .map((el) => {
-      return `
-      <li>
-      <span class="category">${el.category}</span><br/>
-      <span class="action">
-  ${el.action} :</span>
-  <br /><span class="shortcut">
-  ${el.shortcut}</span>
+      return `<div class="individual-result">
+      <span class="category">${el.category}</span>
+      <p class="action">${el.action}</p>
+  <span class="shortcut">${el.shortcut}</span>
+  </div>
 `;
     })
     .join("");

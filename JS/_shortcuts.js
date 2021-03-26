@@ -167,11 +167,6 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "Effacer le cache",
-    shortcut: "<code>ctrl maj suppr</>",
-    category: "navigateur",
-  },
-  {
     action: "Ouvrir les <i>dev tools</i>",
     shortcut: "<code>ctrl maj I</code> / <code>F12</code>",
     category: "navigateur",
@@ -182,7 +177,7 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "Afficher code source",
+    action: "Afficher le code source",
     shortcut: "<code>ctrl U</code>",
     category: "navigateur",
   },
@@ -193,7 +188,7 @@ export const shortcuts = [
   },
   {
     action: "Changer position onglet",
-    shortcut: "<code>ctrl maj top/down</code>",
+    shortcut: "<code>ctrl maj ↥/↧</code>",
     category: "navigateur",
   },
   {
@@ -203,7 +198,7 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "Page précédente/page suivante",
+    action: "Page précédente/suivante",
     shortcut: "<code>alt ←</code> / <code>alt →</code>",
     category: "navigateur",
   },
@@ -221,7 +216,7 @@ export const shortcuts = [
   },
   {
     action: "Aller à la barre de recherche",
-    shortcut: "<code>alt d</code> / <code>ctrl l</code>",
+    shortcut: "<code>alt D</code> / <code>ctrl L</code>",
     category: "navigateur",
   },
   {
@@ -273,15 +268,15 @@ git push origin $branch</pre></code>`,
     category: "git",
   },
   {
-    action: "Voir <i>username</i> et <i>email</i> de configurés globalement",
+    action: "Voir <i>username</i> et <i>email</i> configurés globalement",
     shortcut: "<pre><code>git config --list</pre></code>",
     category: "git",
   },
   {
     action: "Modifier <i>username</i> et <i>email</i> du repo actuel",
     shortcut: `
-    <pre><code>git config user.name "%username"
-git config user.email "%email"
+    <pre><code>git config user.name "$username"
+git config user.email "$email"
 </pre></code>
     Peut aussi être fait en ajoutant le champ <code>user</code> puis les lignes <code>email = "$email"</code> et <code>name = "$username"</code> au fichier <code>repository/.git/config</code> (<code>ls -a</code> pour l'afficher)`,
     category: "git",
@@ -299,7 +294,7 @@ git remote -v</pre></code>`,
   },
   {
     action:
-      "Récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
+      "Récupérer les modifs <i>(pull)</i> depuis un repo distant différent du repo actuel",
     shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer puis :
     <pre><code>git remote add upstream $urlRepo</pre></code>
      On peut alors faire le pull avec <code>git pull upstream</code><br/>
@@ -318,7 +313,7 @@ git remote -v</pre></code>`,
   },
   {
     action: "Push une branche locale en remote",
-    shortcut: `se placer sur la branche à pousser avec <code>git checkout</code> puis :
+    shortcut: `Se placer sur la branche à pousser avec <code>git checkout</code> puis :
     <pre><code>git push --set-upstream origin $branche
 git branch</pre></code>`,
     category: "git",
@@ -334,13 +329,13 @@ git branch</pre></code>`,
     category: "git",
   },
   {
-    action: "Changer url origin",
+    action: "Changer <i>url origin</i>",
     shortcut: "<pre><code>git remote set-url origin $urlRemote</pre></code>",
     category: "git",
   },
   // BASH
   {
-    action: "Run un audit Lighthouse",
+    action: "Run un audit <i>Lighthouse</i>",
     shortcut: `<pre><code>lighthouse $url --view</code></pre>Le paquet <code>lighthouse</code> doit être installé ainsi que Chrome (?)<br/><code>--view</code> permet d'ouvrir le rapport généré dans la foulée.`,
     category: "bash",
   },
@@ -357,7 +352,7 @@ git branch</pre></code>`,
   {
     action: "Visualiser T°C CPU",
     shortcut:
-      "<pre><code>watch sensors</code></pre><code>lm-sensors</code> doit être installé)",
+      "<pre><code>watch sensors</code></pre><code>(lm-sensors</code> doit être installé)",
     category: "bash",
   },
   {
@@ -367,7 +362,7 @@ git branch</pre></code>`,
   },
   {
     action: "Renommer un dossier",
-    shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (renseigner les chemins complets si vous êtes à l'extérieur du dossier où les dossiers doivent être supprimés)`,
+    shortcut: `<pre><code>mv $dirName1 $dirName2</pre></code> (renseigner les chemins relatifs)`,
     category: "bash",
   },
 
@@ -470,8 +465,8 @@ git branch</pre></code>`,
   },
   // UBUNTU
   {
-    action: "afficher les fichiers cachés dans l'explorateur de fichiers",
-    shortcut: "ctrl H",
+    action: "Afficher les fichiers cachés dans l'explorateur de fichiers",
+    shortcut: "<code>ctrl H</code>",
     category: "ubuntu",
   },
 ];

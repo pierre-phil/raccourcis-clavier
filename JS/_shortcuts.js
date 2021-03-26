@@ -42,12 +42,12 @@ export const shortcuts = [
   },
   {
     action: "Commenter le code (ligne unique)",
-    shortcut: `sélectionner puis <code>ctrl maj  /</code>`,
+    shortcut: `Sélectionner puis <code>ctrl maj  /</code>`,
     category: "vsc",
   },
   {
     action: "Commenter le code (multi-ligne)",
-    shortcut: `sélectionner puis <code>ctrl maj A</code>`,
+    shortcut: `Sélectionner puis <code>ctrl maj A</code>`,
     category: "vsc",
   },
   {
@@ -97,7 +97,7 @@ export const shortcuts = [
     category: "vsc",
   },
   {
-    action: `Désactiver les <i>tips</i> au survol de la souris`,
+    action: `Désactiver les infos au survol de la souris`,
     shortcut: `Aller dans <pre><code>file/preferences/settings/textEditor/suggestions/quickSuggestions</code></pre> et cliquer sur <code>edit in settings.json</code>
     <br/>Si une ligne est rajoutée automatiquement, la supprimer, puis ajouter <code>"editor.hover.enabled": "false"</code>`,
     category: "vsc",
@@ -142,7 +142,7 @@ export const shortcuts = [
     shortcut: `Aller dans les préférences <code>ctrl ,</code> et chercher <code>Workbench: Color Customizations</code><br/>
     Modifier dans <code>settings.json</code> et ajouter : <pre><code>"workbench.colorCustomizations": {
     "editor.selectionBackground": "#135564",
-}</pre></code> en remplaçant par la couleur de votre choix.`,
+}</pre></code> en remplaçant par la couleur de votre choix`,
     category: "vsc",
   },
   // NAVIGATEUR
@@ -152,7 +152,7 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "Nettoyer <i>local storage</i>",
+    action: "Nettoyer local storage",
     shortcut: "<pre><code>localStorage.clear()</code></pre>",
     category: "navigateur",
   },
@@ -167,7 +167,7 @@ export const shortcuts = [
     category: "navigateur",
   },
   {
-    action: "Ouvrir les <i>dev tools</i>",
+    action: "Ouvrir les dev tools",
     shortcut: "<code>ctrl maj I</code> / <code>F12</code>",
     category: "navigateur",
   },
@@ -263,17 +263,17 @@ git push origin $branch</pre></code>`,
     category: "git",
   },
   {
-    action: "Voir <i>url origin</i>",
+    action: "Voir url origin",
     shortcut: "<pre><code>git remote -v</pre></code>",
     category: "git",
   },
   {
-    action: "Voir <i>username</i> et <i>email</i> configurés globalement",
+    action: "Voir username et email configurés globalement",
     shortcut: "<pre><code>git config --list</pre></code>",
     category: "git",
   },
   {
-    action: "Modifier <i>username</i> et <i>email</i> du repo actuel",
+    action: "Modifier username et email du repo actuel",
     shortcut: `
     <pre><code>git config user.name "$username"
 git config user.email "$email"
@@ -282,19 +282,19 @@ git config user.email "$email"
     category: "git",
   },
   {
-    action: "Modifier <i>url origin</i>",
+    action: "Modifier url origin",
     shortcut: "<pre><code>git remote set-url origin $url</pre></code>",
     category: "git",
   },
   {
-    action: "Ajouter <i>url origin</i>",
+    action: "Ajouter url origin",
     shortcut: `<pre><code>git remote add origin $url
 git remote -v</pre></code>`,
     category: "git",
   },
   {
     action:
-      "Récupérer les modifs <i>(pull)</i> depuis un repo distant différent du repo actuel",
+      "Récupérer les modifs (pull) depuis un repo distant différent du repo actuel",
     shortcut: `Renseigner l'url du repo distant dans lequel il faut tirer puis :
     <pre><code>git remote add upstream $urlRepo</pre></code>
      On peut alors faire le pull avec <code>git pull upstream</code><br/>
@@ -329,13 +329,13 @@ git branch</pre></code>`,
     category: "git",
   },
   {
-    action: "Changer <i>url origin</i>",
+    action: "Changer url origin",
     shortcut: "<pre><code>git remote set-url origin $urlRemote</pre></code>",
     category: "git",
   },
   // BASH
   {
-    action: "Run un audit <i>Lighthouse</i>",
+    action: "Run un audit Lighthouse",
     shortcut: `<pre><code>lighthouse $url --view</code></pre>Le paquet <code>lighthouse</code> doit être installé ainsi que Chrome (?)<br/><code>--view</code> permet d'ouvrir le rapport généré dans la foulée.`,
     category: "bash",
   },
@@ -368,12 +368,12 @@ git branch</pre></code>`,
 
   // YARN
   {
-    action: `Accéder au dossier <i>cache</i>`,
+    action: `Accéder au dossier cache`,
     shortcut: "<code>yarn cache list</code>",
     category: "yarn",
   },
   {
-    action: `Installer les dépendances depuis <i>package.json</i>`,
+    action: `Installer les dépendances depuis package.json`,
     shortcut: "<code>yarn</code>",
     category: "yarn",
   },
@@ -390,77 +390,94 @@ git branch</pre></code>`,
   },
   // POSTGRESQL
   {
-    action: "se connecter au service",
-    shortcut: "$ psql -d postgres -U %username",
+    action: "Se connecter au service",
+    shortcut: "<pre><code>psql -d postgres -U %username</code></pre>",
     category: "postgreSQL",
   },
   {
-    action: "lister les users postgres",
-    shortcut: `\\\du`,
+    action: "Lister les users postgres",
+    shortcut: `<code>\\\du</code>`,
     category: "postgreSQL",
   },
   {
-    action: "quitter le prompt postgresql / quitter la connexion à psql",
-    shortcut: `\\\q`,
+    action: "Quitter le prompt postgresql / quitter la connexion à psql",
+    shortcut: `<code>\\\q</code>`,
     category: "postgreSQL",
   },
   {
-    action: "afficher les infos de connexion",
-    shortcut: `\\\conninfo`,
+    action: "Afficher les infos de connexion",
+    shortcut: `<code>\\\conninfo</code>`,
     category: "postgreSQL",
   },
   {
-    action: "se connecter à une DB",
-    shortcut: `\\\c %dataBase`,
+    action: "Se connecter à une DB",
+    shortcut: `<code>\\\c %dataBase</code>`,
     category: "postgreSQL",
   },
   {
-    action: "lister toutes les tables",
-    shortcut: `\\\dt`,
+    action: "Lister toutes les tables",
+    shortcut: `<code>\\\dt</code>`,
     category: "postgreSQL",
   },
-  { action: "lister les rôles", shortcut: `\\\du`, category: "postgreSQL" },
   {
-    action: "lister toutes les DB",
-    shortcut: `\\\list`,
+    action: "Lister les rôles",
+    shortcut: `<code>\\\du</code>`,
+    category: "postgreSQL",
+  },
+  {
+    action: "Lister toutes les DB",
+    shortcut: `<code>\\\list</code>`,
     category: "postgreSQL",
   },
   // SIMPLE REACT SNIPETS
-  { action: "import React", shortcut: "imr", category: "reactSnippets" },
+  {
+    action: "import React",
+    shortcut: "<code>imr</code>",
+    category: "reactSnippets",
+  },
   {
     action: "import React, { useState }",
-    shortcut: "imrs",
+    shortcut: "<code>imrs</code>",
     category: "reactSnippets",
   },
   {
     action: "import React, { useState, useEffect }",
-    shortcut: "imrse",
+    shortcut: "<code>imrse</code>",
     category: "reactSnippets",
   },
   {
-    action: "insert stateless functional component",
-    shortcut: "sfc",
+    action: "Stateless functional component",
+    shortcut: "<code>sfc</code>",
     category: "reactSnippets",
   },
-  { action: "useEffect()", shortcut: "uef", category: "reactSnippets" },
-  { action: "useState()", shortcut: "usf", category: "reactSnippets" },
+  {
+    action: "useEffect()",
+    shortcut: "<code>uef</code>",
+    category: "reactSnippets",
+  },
+  {
+    action: "useState()",
+    shortcut: "<code>usf</code>",
+    category: "reactSnippets",
+  },
 
   // Node
   {
-    action: "installer dernière version de node",
-    shortcut: `$ npm install -g n ;
-	$ sudo n latest`,
+    action: "Installer dernière version de Node",
+    shortcut: `<pre><code>npm install -g n
+sudo n latest</pre></code>`,
     category: "node",
   },
   {
-    action: "installer une version précise de node",
-    shortcut: `$ nvm install v%12.19.0 ;
-	pour l'utiliser $ nvm use %12.19.0 ;`,
+    action: "installer une version précise de Node",
+    shortcut: `<pre><code>nvm install v%12.19.0</code></pre>
+	Pour l'utiliser <pre><code>nvm use %12.19.0</code></pre>`,
     category: "node",
   },
   {
-    action: "créer un fichier de configuration de version de Node pour Netlify",
-    shortcut: `être sur la bonne version de Node à utiliser puis dans la racine du projet, taper $ node -v > .nvmrc ; un fichier contenant la version de Node à utiliser est créé et le repo peut être poussé vers Netlify`,
+    action: "Créer un fichier de configuration de version de Node pour Netlify",
+    shortcut: `Être sur la bonne version de <i>Node</i> à utiliser puis dans la racine du projet, taper <code>node -v > .nvmrc</code><br/>
+    Cela va créer un fichier contenant la version de Node à utiliser et le repo pourra être poussé vers <i>Netlify</i>`,
     category: "node",
   },
   // UBUNTU

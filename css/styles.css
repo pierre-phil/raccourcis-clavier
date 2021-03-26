@@ -35,6 +35,10 @@
   margin-bottom: 1rem;
 }
 
+.searchArea input {
+  padding-left: 0.15rem;
+}
+
 .searchArea button {
   max-width: 6rem;
   border-radius: 3px;

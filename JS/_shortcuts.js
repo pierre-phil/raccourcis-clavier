@@ -486,4 +486,24 @@ sudo n latest</pre></code>`,
     shortcut: "<code>ctrl H</code>",
     category: "ubuntu",
   },
+  {
+    action: "Changer de fenêtre directement",
+    shortcut: "<code>alt échap</code>",
+    category: "ubuntu",
+  },
+  {
+    action: "Passer d'un espace de travail à l'autre",
+    shortcut: "<code>super capsLock pageUp/pageDown</code>",
+    category: "ubuntu",
+  },
+  {
+    action: "Déplacer la fenêtre vers l'espace de travail suivant/précédent",
+    shortcut: "<code>super maj pageUp/pageDown</code>",
+    category: "ubuntu",
+  },
+  {
+    action: "Déplacer la fenêtre vers l'autre moniteur",
+    shortcut: "<code>maj super droite/gauche</code>",
+    category: "ubuntu",
+  },
 ];

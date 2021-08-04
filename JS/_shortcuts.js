@@ -352,7 +352,7 @@ git branch</pre></code>`,
   {
     action: "Visualiser T°C CPU",
     shortcut:
-      "<pre><code>watch sensors</code></pre><code>(lm-sensors</code> doit être installé)",
+      "<pre><code>watch sensors</code></pre>(<code>lm-sensors</code> doit être installé)",
     category: "bash",
   },
   {
@@ -504,6 +504,12 @@ sudo n latest</pre></code>`,
   {
     action: "Déplacer la fenêtre vers l'autre moniteur",
     shortcut: "<code>maj super droite/gauche</code>",
+    category: "ubuntu",
+  },
+  {
+    action: "Stopper processus/port",
+    shortcut: `<pre><code>fkill $processus
+fkill $port</code></pre>(<code>fkill</code> doit être installé)`,
     category: "ubuntu",
   },
 ];
